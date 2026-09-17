@@ -5,6 +5,7 @@ BASIS - HTML
 - workout toevoegen pagina: knoppen voor toevoegen van workout
 - overzicht pagina: calorieën. stappenteller. gewicht tracker. workout teller. totaal aantal trainingminuten
 - (week)doelen pagina: houdt bij wat je wilt doen en gedaan hebt
+- uitleg van workouts pagina: een overzicht waar je kan wat voor workouts je kan doen voor beginners
 - navigatiebalkje aan de bovenkant
 - knopjes op website
 
