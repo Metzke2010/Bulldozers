@@ -2,9 +2,9 @@ DE BULLDOZER TRACKER STAPPENPLAN
 
 BASIS - HTML
 - homepagina: informatie over website. laatste workout
-- workout toevoegen: knoppen voor toevoegen van workout
-- overzicht: calorieën. stappenteller. workout teller. totaal aantal trainingminuten
-- (week)doelen: houdt bij wat je wilt doen en gedaan hebt
+- workout toevoegen pagina: knoppen voor toevoegen van workout
+- overzicht pagina: calorieën. stappenteller. workout teller. totaal aantal trainingminuten
+- (week)doelen pagina: houdt bij wat je wilt doen en gedaan hebt
 - navigatiebalkje aan de bovenkant
 - knopjes op website
 
