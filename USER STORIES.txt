@@ -1,0 +1,8 @@
+USER STORIES
+
+1 ALS gymmer WIL IK mijn workout kunnen opslaan met oefeningen, sets, herhalingen, en gewichten, ZODAT ik later kan terugzien wat ik heb gedaan.
+2 ALS gymmer WIL IK mijn vorige workouts overzichtelijk kunnen bekijken, ZODAT ik snel kan zien wat ik de vorige keer heb gedaan.
+3 ALS gebruiker WIL IK persoonlijke fitnessdoelen kunnen instellen, ZODAT ìk geruicht ergens naartoe kan werken.
+4 ALS gebruiker WIL IK kunnen zien hoeveel procent van mijn doel ik al heb bereikt, ZODAT ik weet hoever ik nog van doel verwijderd ben.
+5 ALS beginnend gymmer WIL IK bestaande workouts kunnen bekijken, ZODAT ik inspiratie krijg en weet welke oefeningen ik kan doen.
+6 ALS sporter WIL IK ook activiteiten zoals hardlopen of fietsen kunnen opslaan, ZODAT ik al mijn sportieve activiteiten op een plek kan bijhouden.
