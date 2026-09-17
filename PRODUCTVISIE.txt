@@ -15,7 +15,7 @@ Mensen vergeten meestal best snel dingen. Als ze 3 dagen later weer eens naar de
 ons product gaat het volgende bevatten om gymmers te helpen:
 
 1 homepagina
-2 een plek waar je workouts die je hebt gedaan kan toevoegen
+2 een plek waar je workouts die je hebt gedaan kan toevoegen door middel van voorgestelde workouts en zelf workouts kunnen toevoegen
 3 een plek waar je overzichtelijk kan zien wat je hebt bereikt met je workouts
 4 een plek waar je doelen kunt stellen en in real time progressie kunt zien hoeverre je het doel al hebt behaald
 5 een plek waar je al bestaande workouts kunt zien (voor beginners)
