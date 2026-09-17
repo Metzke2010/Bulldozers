@@ -20,5 +20,6 @@ OPLSAAN/BEREKENINGEN - JAVASCRIPT
 - gegevens opslaan
 - gegevens ophalen
 - gegevens berekenen
+- doelen bijhouden
 - grafieken
 - doelenbalkje informatie
