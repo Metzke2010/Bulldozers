@@ -8,6 +8,7 @@
     <title>Workout toevoegen - FitBulldozers</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -115,55 +116,6 @@
         </ul>
 
     </main>
-
-
-    <script>
-
-        function workoutToevoegen() {
-
-            let workout = document.getElementById("workout").value;
-
-            if (workout == "") {
-                alert("Kies eerst een workout.");
-                return;
-            }
-
-            let lijst = document.getElementById("workoutLijst");
-
-            let nieuwItem = document.createElement("li");
-            
-            nieuwItem.style.color = "white";
-
-            nieuwItem.textContent = workout;
-
-            lijst.appendChild(nieuwItem);
-        }
-
-
-        function eigenWorkoutToevoegen() {
-
-            let workout = document.getElementById("eigenWorkout").value;
-
-            if (workout == "") {
-                alert("Vul eerst een workout in.");
-                return;
-            }
-
-            let lijst = document.getElementById("workoutLijst");
-
-            let nieuwItem = document.createElement("li");
-
-            nieuwItem.classList.add("wit");
-
-            nieuwItem.textContent = workout;
-
-            lijst.appendChild(nieuwItem);
-
-            document.getElementById("eigenWorkout").value = "";
-        }
-        
-
-    </script>
 
 </body>
 
