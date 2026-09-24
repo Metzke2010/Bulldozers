@@ -1,26 +1,222 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitBulldozer</title>
+
+    <title>Overzicht - FitBulldozers</title>
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
+
 <body>
 
-    <header>
-        <h1><a href="index.html">FitBulldozer</a></h1>
-        <i><h4 class="ondertitel">~de weg naar bulldozer worden~</h4></i>
+    <header class="header">
+
+        <nav class="nav container">
+
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="workouttoevoegen.html" class="nav-link">Workouts toevoegen</a>
+            <a href="overzicht.html" class="nav-link">Overzicht</a>
+            <a href="workoutuitleg.html" class="nav-link">Workouts uitleg</a>
+            <a href="doelen.html" class="nav-link">Doelen</a>
+
+        </nav>
+
     </header>
 
-    <nav>
-        <a href="overzicht.html">Overzicht</a>
-        <a href="doelen.html">Doelen</a>
-        <a href="workouttoevoegen.html">Workout toevoegen</a>
-        <a href="workoutuitleg.html">Uitleg workouts</a>
-    </nav>
 
-    <p>Dit is het overzicht</p>
+    <main class="container">
+
+        <h1 class="wit">Overzicht</h1>
+
+        <p class="wit">
+            Hier kun je jouw dagelijkse fitnessgegevens bekijken en bijhouden.
+        </p>
+
+
+        <!-- Calorieën -->
+
+        <h2 class="wit">Calorieën</h2>
+
+        <p class="wit">
+            Verbrande calorieën:
+        </p>
+
+        <input
+            type="number"
+            id="calorieen"
+            placeholder="Bijvoorbeeld 500"
+        >
+
+        <button class="btn" onclick="calorieenOpslaan()">
+            Opslaan
+        </button>
+
+        <p class="wit">
+            Totaal: <span id="calorieenTotaal">0</span> calorieën
+        </p>
+
+
+        <br>
+        <hr>
+        <br>
+
+
+        <!-- Stappenteller -->
+
+        <h2 class="wit">Stappenteller</h2>
+
+        <p class="wit">
+            Hoeveel stappen heb je vandaag gezet?
+        </p>
+
+        <input
+            type="number"
+            id="stappen"
+            placeholder="Bijvoorbeeld 8000"
+        >
+
+        <button class="btn" onclick="stappenOpslaan()">
+            Opslaan
+        </button>
+
+        <p class="wit">
+            Stappen: <span id="stappenTotaal">0</span>
+        </p>
+
+
+        <br>
+        <hr>
+        <br>
+
+
+        <!-- Gewicht tracker -->
+
+        <h2 class="wit">Gewicht tracker</h2>
+
+        <p class="wit">
+            Vul je huidige gewicht in:
+        </p>
+
+        <input
+            type="number"
+            id="gewicht"
+            placeholder="Bijvoorbeeld 80"
+        >
+
+        <button class="btn" onclick="gewichtOpslaan()">
+            Opslaan
+        </button>
+
+        <p class="wit">
+            Huidig gewicht:
+            <span id="gewichtTotaal">0</span> kg
+        </p>
+
+
+        <br>
+        <hr>
+        <br>
+
+
+        <!-- Workout teller -->
+
+        <h2 class="wit">Workout teller</h2>
+
+        <p class="wit">
+            Aantal workouts:
+            <span id="workoutTeller">0</span>
+        </p>
+
+        <button class="btn" onclick="workoutToevoegen()">
+            Workout +1
+        </button>
+
+
+        <br><br>
+        <hr>
+        <br>
+
+
+        <!-- Trainingsminuten -->
+
+        <h2 class="wit">Trainingsminuten</h2>
+
+        <p class="wit">
+            Hoeveel minuten heb je getraind?
+        </p>
+
+        <input
+            type="number"
+            id="minuten"
+            placeholder="Bijvoorbeeld 60"
+        >
+
+        <button class="btn" onclick="minutenToevoegen()">
+            Minuten toevoegen
+        </button>
+
+        <p class="wit">
+            Totaal aantal trainingsminuten:
+            <span id="minutenTotaal">0</span> minuten
+        </p>
+
+    </main>
+
+
+    <script>
+
+        let aantalWorkouts = 0;
+        let totaalMinuten = 0;
+
+
+        function calorieenOpslaan() {
+
+            let calorieen = document.getElementById("calorieen").value;
+
+            document.getElementById("calorieenTotaal").textContent = calorieen;
+        }
+
+
+        function stappenOpslaan() {
+
+            let stappen = document.getElementById("stappen").value;
+
+            document.getElementById("stappenTotaal").textContent = stappen;
+        }
+
+
+        function gewichtOpslaan() {
+
+            let gewicht = document.getElementById("gewicht").value;
+
+            document.getElementById("gewichtTotaal").textContent = gewicht;
+        }
+
+
+        function workoutToevoegen() {
+
+            aantalWorkouts = aantalWorkouts + 1;
+
+            document.getElementById("workoutTeller").textContent = aantalWorkouts;
+        }
+
+
+        function minutenToevoegen() {
+
+            let minuten = document.getElementById("minuten").value;
+
+            totaalMinuten = totaalMinuten + Number(minuten);
+
+            document.getElementById("minutenTotaal").textContent = totaalMinuten;
+
+            document.getElementById("minuten").value = "";
+        }
+
+    </script>
+
 </body>
+
 </html>
