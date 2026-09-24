@@ -1,26 +1,167 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitBulldozer</title>
+
+    <title>Workout toevoegen - FitBulldozers</title>
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
+
 <body>
 
-    <header>
-        <h1><a href="index.html">FitBulldozer</a></h1>
-        <i><h4 class="ondertitel">~de weg naar bulldozer worden~</h4></i>
+    <header class="header">
+
+        <nav class="nav container">
+
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="workouttoevoegen.html" class="nav-link">Workouts toevoegen</a>
+            <a href="overzicht.html" class="nav-link">Overzicht</a>
+            <a href="workoutuitleg.html" class="nav-link">Workouts uitleg</a>
+            <a href="doelen.html" class="nav-link">Doelen</a>
+
+        </nav>
+
     </header>
 
-    <nav>
-        <a href="overzicht.html">Overzicht</a>
-        <a href="doelen.html">Doelen</a>
-        <a href="workouttoevoegen.html">Workout toevoegen</a>
-        <a href="workoutuitleg.html">Uitleg workouts</a>
-    </nav>
 
-    <p>Dit is de plek om de workouts toe te voegen</p>
+    <main class="container">
+
+        <h1>Workout toevoegen</h1>
+
+        <p>Kies hieronder een oefening die je wilt toevoegen aan je workout.</p>
+
+
+        <!-- Workout kiezen -->
+
+        <label for="workout">Kies een oefening:</label>
+
+        <select id="workout">
+
+            <option value="">Kies een oefening</option>
+
+            <option value="Incline Chest Press">Incline Chest Press</option>
+            <option value="Flat Press">Flat Press</option>
+
+            <option value="Shoulder Press">Shoulder Press</option>
+            <option value="Lateral Raise">Lateral Raise</option>
+
+            <option value="Dips">Dips</option>
+            <option value="Overhead Extension">Overhead Extension</option>
+            <option value="Tricep Pushdown">Tricep Pushdown</option>
+
+            <option value="Lat Pulldown">Lat Pulldown</option>
+            <option value="Upper Back Row">Upper Back Row</option>
+            <option value="Close Grip Lat Pulldown">Close Grip Lat Pulldown</option>
+
+            <option value="Bicep Curl">Bicep Curl</option>
+            <option value="Hammer Curl">Hammer Curl</option>
+            <option value="Forearms">Forearms</option>
+
+            <option value="Chest Fly">Chest Fly</option>
+
+            <option value="Leg Press">Leg Press</option>
+            <option value="Squat">Squat</option>
+
+            <option value="Stiff Leg Deadlift">Stiff Leg Deadlift</option>
+            <option value="Hip Hinge">Hip Hinge</option>
+
+            <option value="Leg Extension">Leg Extension</option>
+            <option value="Leg Curl">Leg Curl</option>
+
+            <option value="Calf Raise">Calf Raise</option>
+            <option value="Abductor">Abductor</option>
+
+        </select>
+
+        <br><br>
+
+        <button class="btn" onclick="workoutToevoegen()">
+            Workout toevoegen
+        </button>
+
+
+        <br><br>
+        <hr>
+        <br>
+
+
+        <!-- Eigen workout toevoegen -->
+
+        <h2>Eigen workout toevoegen</h2>
+
+        <p>Staat jouw oefening niet in de lijst? Voeg hem hier zelf toe.</p>
+
+        <input
+            type="text"
+            id="eigenWorkout"
+            placeholder="Naam van de oefening"
+        >
+
+        <button class="btn" onclick="eigenWorkoutToevoegen()">
+            Toevoegen
+        </button>
+
+
+        <br><br>
+
+
+        <!-- Toegevoegde workouts -->
+
+        <h2>Mijn workout</h2>
+
+        <ul id="workoutLijst">
+
+        </ul>
+
+    </main>
+
+
+    <script>
+
+        function workoutToevoegen() {
+
+            let workout = document.getElementById("workout").value;
+
+            if (workout == "") {
+                alert("Kies eerst een workout.");
+                return;
+            }
+
+            let lijst = document.getElementById("workoutLijst");
+
+            let nieuwItem = document.createElement("li");
+
+            nieuwItem.textContent = workout;
+
+            lijst.appendChild(nieuwItem);
+        }
+
+
+        function eigenWorkoutToevoegen() {
+
+            let workout = document.getElementById("eigenWorkout").value;
+
+            if (workout == "") {
+                alert("Vul eerst een workout in.");
+                return;
+            }
+
+            let lijst = document.getElementById("workoutLijst");
+
+            let nieuwItem = document.createElement("li");
+
+            nieuwItem.textContent = workout;
+
+            lijst.appendChild(nieuwItem);
+
+            document.getElementById("eigenWorkout").value = "";
+        }
+
+    </script>
+
 </body>
+
 </html>
