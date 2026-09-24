@@ -29,16 +29,14 @@
 
     <main class="container">
 
-        <h1>Workout toevoegen</h1>
+        <h1 class="wit">Workout toevoegen</h1>
 
-        <p>Kies hieronder een oefening die je wilt toevoegen aan je workout.</p>
+        <p class="wit">Kies hieronder een oefening die je wilt toevoegen aan je workout.</p>
 
 
         <!-- Workout kiezen -->
 
-        <label for="workout">Kies een oefening:</label>
-
-        <select id="workout">
+        <select class="wit" id="workout">
 
             <option value="">Kies een oefening</option>
 
@@ -58,7 +56,7 @@
 
             <option value="Bicep Curl">Bicep Curl</option>
             <option value="Hammer Curl">Hammer Curl</option>
-            <option value="Forearms">Forearms</option>
+            
 
             <option value="Chest Fly">Chest Fly</option>
 
@@ -66,13 +64,13 @@
             <option value="Squat">Squat</option>
 
             <option value="Stiff Leg Deadlift">Stiff Leg Deadlift</option>
-            <option value="Hip Hinge">Hip Hinge</option>
+            <option value="Hip Hinge">RDL</option>
 
             <option value="Leg Extension">Leg Extension</option>
             <option value="Leg Curl">Leg Curl</option>
 
             <option value="Calf Raise">Calf Raise</option>
-            <option value="Abductor">Abductor</option>
+            <option value="Abductor">Abductor Machine</option>
 
         </select>
 
@@ -90,9 +88,9 @@
 
         <!-- Eigen workout toevoegen -->
 
-        <h2>Eigen workout toevoegen</h2>
+        <h2 class="wit">Eigen workout toevoegen</h2>
 
-        <p>Staat jouw oefening niet in de lijst? Voeg hem hier zelf toe.</p>
+        <p class="wit">Staat jouw oefening niet in de lijst? Voeg hem hier zelf toe.</p>
 
         <input
             type="text"
@@ -110,7 +108,7 @@
 
         <!-- Toegevoegde workouts -->
 
-        <h2>Mijn workout</h2>
+        <h2 class="wit">Mijn workout</h2>
 
         <ul id="workoutLijst">
 
@@ -153,12 +151,15 @@
 
             let nieuwItem = document.createElement("li");
 
+            nieuwItem.classList.add("wit");
+
             nieuwItem.textContent = workout;
 
             lijst.appendChild(nieuwItem);
 
             document.getElementById("eigenWorkout").value = "";
         }
+        
 
     </script>
 
