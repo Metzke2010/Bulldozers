@@ -1,0 +1,10 @@
+homepagina - ziet er goed uit. geen commentaar
+workouts toevoegen - grijze tekst op grijze achtergrond bij selecteren van workout
+overzicht - pijltjes kunnen naar negatieve getallen gaan
+workouts uitleg - ontbreekt, navigatiebalk
+weekdoelen - ontbreekt, navigatiebalk
+navigatiebalk - logo linksboven?
+achtergrond - passend voor thema
+javascript - ontbreekt
+
+voor workouts toevoegen: maak gebruik van filmpjes
