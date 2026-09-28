@@ -202,6 +202,10 @@ h2 {
     color: white;
 }
 
+h3 {
+    color: white;
+}
+
 .kaart {
     background: rgba(74, 0, 131, 0.7);
     padding: 20px;
@@ -220,4 +224,28 @@ h2 {
     background: #A7F3D0;
     height: 10px;
     border-radius: 10px;
+}
+
+.doel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background: #A7F3D0;
+    color: #171B24;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin: 5px;
+    width: 80px;
 }
