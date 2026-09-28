@@ -185,3 +185,39 @@ input:focus {
    
 }
 
+.doelenhoofd {
+    max-width: 700px;
+    margin: auto;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+.kaart {
+    background: rgba(74, 0, 131, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.voortgang {
+    background: #414B5C;
+    height: 10px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.balk {
+    background: #A7F3D0;
+    height: 10px;
+    border-radius: 10px;
+}
