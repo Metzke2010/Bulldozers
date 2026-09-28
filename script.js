@@ -54,3 +54,42 @@ function eigenWorkoutToevoegen() {
     lijst.appendChild(nieuwItem);
     document.getElementById("eigenWorkout").value = "";
 }
+
+let workouts = 0;
+
+function voegTrainingToe() {
+    workouts++;
+    updatePagina();
+}
+
+function doelenOpslaan() {
+
+    let workoutDoel = Number(document.getElementById("nieuwWorkoutDoel").value);
+
+    if (workoutDoel < 1) {
+        alert("Vul een doel in dat groter is dan 0!");
+        return;
+    }
+
+    document.getElementById("workoutDoel").innerText = workoutDoel;
+
+    updatePagina();
+}
+
+function updatePagina() {
+
+    let workoutDoel = Number(document.getElementById("workoutDoel").innerText);
+
+    workouts = Math.min(workouts, workoutDoel);
+
+    document.getElementById("workoutHuidig").innerText = workouts;
+
+    let workoutPercentage = (workouts / workoutDoel) * 100;
+
+    document.getElementById("workoutBalk").style.width = workoutPercentage + "%";
+
+    let totaal = workoutPercentage;
+
+    document.getElementById("percentage").innerText = Math.round(totaal) + "%";
+    document.getElementById("totalebalk").style.width = totaal + "%";
+}

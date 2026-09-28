@@ -23,10 +23,10 @@
 
         <div class="kaart">
             <h2>Mijn wekelijkse voortgang</h2>
-            <h1 id="percentage">50%</h1>
+            <h1 id="percentage">0%</h1>
 
             <div class="voortgang">
-                <div class="balk" id="totalebalk" style="width:50%"></div>
+                <div class="balk" id="totalebalk" style="width:0%"></div>
             </div>
 
             <p>Goed bezig!</p>
@@ -46,8 +46,17 @@
             </div>
 
             <div class="voortgang">
-                <div class="balk" id="workoutBalk" style="width:50%"></div>
+                <div class="balk" id="workoutBalk" style="width:0%"></div>
             </div>
+        </div>
+
+        <div class="kaart">
+            <h2>Mijn doelen aanpassen</h2>
+
+            <p>Aantal trainingen per week:</p>
+            <input type="number" id="nieuwWorkoutDoel" value="4" min="1">
+
+            <button onclick="doelenOpslaan()">Doelen opslaan</button>
         </div>
     </div>
 
