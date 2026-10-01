@@ -1,0 +1,21 @@
+Oude Feedback:
+homepagina - ziet er goed uit. geen commentaar
+workouts toevoegen - grijze tekst op grijze achtergrond bij selecteren van workout (gedaan)
+overzicht - pijltjes kunnen naar negatieve getallen gaan (gedaan)
+workouts uitleg - ontbreekt, navigatiebalk (gedaan)
+weekdoelen - ontbreekt, navigatiebalk (gedaan)
+navigatiebalk - logo linksboven?
+achtergrond - passend voor thema
+javascript - ontbreekt (gedaan)
+
+voor workouts toevoegen: maak gebruik van filmpjes (de filmpjes staan er, kunnen beter afgewerkt worden)
+
+Nieuwe feedback:
+
+workout toevoegen / overzicht - invoer balkjes te klein en de tekst erin niet goed zichtbaar
+navigatiebalk - logo linksboven?
+workouts uitleg - loopt een beetje vast en kan beter afgewerkt worden (fout 153)
+doelen - meer opties van workouts aan doelen, niet alleen +1 workout
+workout toevoegen - maak de tellers de nieuwe waarde optellen bij elkaar
+workout toevoegen - +1 workout teller werkt niet
+overzicht / doelen - laat de waardes samenwerken
