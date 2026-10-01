@@ -62,40 +62,55 @@ function eigenWorkoutToevoegen() {
 }
 
 let workouts = 0;
+let stappen = 0;
 
-function voegTrainingToe() {
+function voegTrainingToeWorkouts() {
     workouts++;
-    updatePagina();
+    updatePaginaWorkouts();
+}
+function voegTrainingToeStappen() {
+    stappen++;
+    updatePaginaStappen();
 }
 
-function doelenOpslaan() {
-
+function doelenOpslaanWorkouts() {
     let workoutDoel = Number(document.getElementById("nieuwWorkoutDoel").value);
-
     if (workoutDoel < 1) {
         alert("Vul een doel in dat groter is dan 0!");
         return;
     }
-
     document.getElementById("workoutDoel").innerText = workoutDoel;
-
-    updatePagina();
+    updatePaginaWorkouts();
 }
 
-function updatePagina() {
+function doelenOpslaanStappen() {
+    let stappenDoel = Number(document.getElementById("nieuwStappenDoel").value);
+    if (stappenDoel < 1) {
+        alert("Vul een doel in dat groter is dan 0!");
+        return;
+    }
+    document.getElementById("stappenDoel").innerText = stappenDoel;
+    updatePaginaStappen();
+}
 
+function updatePaginaWorkouts() {
     let workoutDoel = Number(document.getElementById("workoutDoel").innerText);
-
     workouts = Math.min(workouts, workoutDoel);
-
     document.getElementById("workoutHuidig").innerText = workouts;
-
     let workoutPercentage = (workouts / workoutDoel) * 100;
-
     document.getElementById("workoutBalk").style.width = workoutPercentage + "%";
+}
 
-    let totaal = workoutPercentage;
+function updatePaginaStappen() {
+    let stappenDoel = Number(document.getElementById("stappenDoel").innerText);
+    stappen = Math.min(stappen, stappenDoel);
+    document.getElementById("stappenHuidig").innerText = workouts;
+    let stappenPercentage = (stappen / stappenDoel) * 100;
+    document.getElementById("stappenBalk").style.width = stappenPercentage + "%";
+}
 
+function updatePaginaTotaal() {
+    let totaal = workoutPercentage + stappenPercentage;
     document.getElementById("percentage").innerText = Math.round(totaal) + "%";
     document.getElementById("totalebalk").style.width = totaal + "%";
 }
