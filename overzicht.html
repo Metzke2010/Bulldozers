@@ -9,7 +9,26 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
+    <style>
+
+        /* Pijltjes bij nummer invoer verwijderen */
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            appearance: textfield;
+            -moz-appearance: textfield;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
@@ -18,151 +37,298 @@
         <nav class="nav container">
 
             <a href="index.html" class="nav-link">Home</a>
-            <a href="workouttoevoegen.html" class="nav-link">Workouts toevoegen</a>
-            <a href="overzicht.html" class="nav-link">Overzicht</a>
-            <a href="workoutuitleg.html" class="nav-link">Workouts uitleg</a>
-            <a href="doelen.html" class="nav-link">Doelen</a>
+
+            <a href="workouttoevoegen.html" class="nav-link">
+                Workouts toevoegen
+            </a>
+
+            <a href="overzicht.html" class="nav-link">
+                Overzicht
+            </a>
+
+            <a href="workoutuitleg.html" class="nav-link">
+                Workouts uitleg
+            </a>
+
+            <a href="doelen.html" class="nav-link">
+                Doelen
+            </a>
 
         </nav>
 
     </header>
 
 
+
     <main class="container">
 
-        <h1 class="wit">Overzicht</h1>
+
+        <h1 class="wit">
+            Overzicht
+        </h1>
+
 
         <p class="wit">
+
             Hier kun je jouw dagelijkse fitnessgegevens bekijken en bijhouden.
+
         </p>
+
 
 
         <!-- Calorieën -->
 
-        <h2 class="wit">Calorieën</h2>
+
+        <h2 class="wit">
+            Calorieën
+        </h2>
+
 
         <p class="wit">
+
             Verbrande calorieën:
+
         </p>
+
 
         <input
             type="number"
             id="calorieen"
+            min="0"
+            oninput="if(this.value < 0) this.value = 0"
             placeholder="Bijvoorbeeld 500"
         >
 
-        <button class="btn" onclick="calorieenOpslaan()">
+
+        <button
+            class="btn"
+            onclick="calorieenOpslaan()">
+
             Opslaan
+
         </button>
 
+
         <p class="wit">
-            Totaal: <span id="calorieenTotaal">0</span> calorieën
+
+            Totaal:
+
+            <span id="calorieenTotaal">
+                0
+            </span>
+
+            calorieën
+
         </p>
 
 
+
         <br>
+
         <hr>
+
         <br>
+
 
 
         <!-- Stappenteller -->
 
-        <h2 class="wit">Stappenteller</h2>
+
+        <h2 class="wit">
+
+            Stappenteller
+
+        </h2>
+
 
         <p class="wit">
+
             Hoeveel stappen heb je vandaag gezet?
+
         </p>
+
 
         <input
             type="number"
             id="stappen"
+            min="0"
+            oninput="if(this.value < 0) this.value = 0"
             placeholder="Bijvoorbeeld 8000"
         >
 
-        <button class="btn" onclick="stappenOpslaan()">
+
+        <button
+            class="btn"
+            onclick="stappenOpslaan()">
+
             Opslaan
+
         </button>
 
+
         <p class="wit">
-            Stappen: <span id="stappenTotaal">0</span>
+
+            Stappen:
+
+            <span id="stappenTotaal">
+                0
+            </span>
+
         </p>
 
 
+
         <br>
+
         <hr>
+
         <br>
+
 
 
         <!-- Gewicht tracker -->
 
-        <h2 class="wit">Gewicht tracker</h2>
+
+        <h2 class="wit">
+
+            Gewicht tracker
+
+        </h2>
+
 
         <p class="wit">
+
             Vul je huidige gewicht in:
+
         </p>
+
 
         <input
             type="number"
             id="gewicht"
+            min="0"
+            oninput="if(this.value < 0) this.value = 0"
             placeholder="Bijvoorbeeld 80"
         >
 
-        <button class="btn" onclick="gewichtOpslaan()">
+
+        <button
+            class="btn"
+            onclick="gewichtOpslaan()">
+
             Opslaan
+
         </button>
 
+
         <p class="wit">
+
             Huidig gewicht:
-            <span id="gewichtTotaal">0</span> kg
+
+            <span id="gewichtTotaal">
+                0
+            </span>
+
+            kg
+
         </p>
 
 
+
         <br>
+
         <hr>
+
         <br>
+
 
 
         <!-- Workout teller -->
 
-        <h2 class="wit">Workout teller</h2>
+
+        <h2 class="wit">
+
+            Workout teller
+
+        </h2>
+
 
         <p class="wit">
+
             Aantal workouts:
-            <span id="workoutTeller">0</span>
+
+            <span id="workoutTeller">
+                0
+            </span>
+
         </p>
 
-        <button class="btn" onclick="workoutToevoegen()">
+
+        <button
+            class="btn"
+            onclick="workoutToevoegen()">
+
             Workout +1
+
         </button>
 
 
+
         <br><br>
+
         <hr>
+
         <br>
+
 
 
         <!-- Trainingsminuten -->
 
-        <h2 class="wit">Trainingsminuten</h2>
+
+        <h2 class="wit">
+
+            Trainingsminuten
+
+        </h2>
+
 
         <p class="wit">
+
             Hoeveel minuten heb je getraind?
+
         </p>
+
 
         <input
             type="number"
             id="minuten"
+            min="0"
+            oninput="if(this.value < 0) this.value = 0"
             placeholder="Bijvoorbeeld 60"
         >
 
-        <button class="btn" onclick="minutenToevoegen()">
+
+        <button
+            class="btn"
+            onclick="minutenToevoegen()">
+
             Minuten toevoegen
+
         </button>
 
+
         <p class="wit">
+
             Totaal aantal trainingsminuten:
-            <span id="minutenTotaal">0</span> minuten
+
+            <span id="minutenTotaal">
+                0
+            </span>
+
+            minuten
+
         </p>
+
 
     </main>
 
