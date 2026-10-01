@@ -13,7 +13,9 @@ function stappenOpslaan() {
 
 function gewichtOpslaan() {
     let gewicht = document.getElementById("gewicht").value;
-    document.getElementById("gewichtTotaal").textContent = gewicht;
+    totaalGewicht = totaalGewicht + Number(gewicht);
+    document.getElementById("gewichtTotaal").textContent = totaalGewicht;
+    document.getElementById("gewicht").value = "";
 }
 
 function workoutToevoegen() {
