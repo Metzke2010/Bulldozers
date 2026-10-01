@@ -22,7 +22,7 @@ function gewichtOpslaan() {
     document.getElementById("gewichtTotaal").textContent = gewicht;
 }
 
-function workoutToevoegen() {
+function workoutTellerToevoegen() {
     aantalWorkouts = aantalWorkouts + 1;
     document.getElementById("workoutTeller").textContent = aantalWorkouts;
 }
