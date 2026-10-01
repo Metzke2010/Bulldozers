@@ -18,7 +18,7 @@ function stappenOpslaan() {
 }
 
 function gewichtOpslaan() {
-    let gewucgtt = document.getElementById("stappen").value;
+    let gewicht = document.getElementById("gewicht").value;
     document.getElementById("gewichtTotaal").textContent = gewicht;
 }
 
