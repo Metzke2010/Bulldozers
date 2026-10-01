@@ -1,22 +1,25 @@
 let aantalWorkouts = 0;
 let totaalMinuten = 0;
-let totaalGewicht = 0;
+let totaalStappen = 0;
+let totaalCalorieen = 0;
 
 function calorieenOpslaan() {
     let calorieen = document.getElementById("calorieen").value;
-    document.getElementById("calorieenTotaal").textContent = calorieen;
+    totaalCalorieen = totaalCalorieen + Number(calorieen);
+    document.getElementById("calorieenTotaal").textContent = totaalCalorieen;
+    document.getElementById("calorieen").value = "";
 }
 
 function stappenOpslaan() {
     let stappen = document.getElementById("stappen").value;
+    totaalStappen = totaalStappen + Number(stappen);
     document.getElementById("stappenTotaal").textContent = stappen;
+    document.getElementById("stappen").value = "";
 }
 
 function gewichtOpslaan() {
-    let gewicht = document.getElementById("gewicht").value;
-    totaalGewicht = totaalGewicht + Number(gewicht);
-    document.getElementById("gewichtTotaal").textContent = totaalGewicht;
-    document.getElementById("gewicht").value = "";
+    let gewucgtt = document.getElementById("stappen").value;
+    document.getElementById("gewichtTotaal").textContent = gewicht;
 }
 
 function workoutToevoegen() {
