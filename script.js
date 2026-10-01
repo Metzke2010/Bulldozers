@@ -13,7 +13,7 @@ function calorieenOpslaan() {
 function stappenOpslaan() {
     let stappen = document.getElementById("stappen").value;
     totaalStappen = totaalStappen + Number(stappen);
-    document.getElementById("stappenTotaal").textContent = stappen;
+    document.getElementById("stappenTotaal").textContent = totaalStappen;
     document.getElementById("stappen").value = "";
 }
 
