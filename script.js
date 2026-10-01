@@ -104,7 +104,7 @@ function updatePaginaWorkouts() {
 function updatePaginaStappen() {
     let stappenDoel = Number(document.getElementById("stappenDoel").innerText);
     stappen = Math.min(stappen, stappenDoel);
-    document.getElementById("stappenHuidig").innerText = workouts;
+    document.getElementById("stappenHuidig").innerText = stappen;
     let stappenPercentage = (stappen / stappenDoel) * 100;
     document.getElementById("stappenBalk").style.width = stappenPercentage + "%";
 }
