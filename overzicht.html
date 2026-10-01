@@ -5,20 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overzicht - FitBulldozers</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        input[type="number"] {
-            appearance: textfield;
-            -moz-appearance: textfield;
-        }
-    </style>
+    <script src="script.js"></script>
 </head>
-
 <body>
     <header class="header">
         <nav class="nav container">
@@ -32,20 +20,18 @@
 
     <main class="container">
         <h1 class="wit">Overzicht</h1>
-        <p class="wit">Hier kun je jouw dagelijkse fitnessgegevens bekijken en bijhouden.</p>
+        <p class="wit">Hier kun je jouw fitnessgegevens bijhouden.</p>
 
         <h2 class="wit">Calorieën</h2>
-        <p class="wit">Verbrande calorieën:</p>
         <input type="number" id="calorieen" min="0" oninput="if(this.value < 0) this.value = 0" placeholder="Bijvoorbeeld 500">
         <button class="btn" onclick="calorieenOpslaan()">Opslaan</button>
-        <p class="wit">Totaal: <span id="calorieenTotaal">0</span> calorieën</p>
+        <p class="wit">Calorieën: <span id="calorieenTotaal">0</span></p>
 
         <br>
         <hr>
         <br>
 
         <h2 class="wit">Stappenteller</h2>
-        <p class="wit">Hoeveel stappen heb je vandaag gezet?</p>
         <input type="number" id="stappen" min="0" oninput="if(this.value < 0) this.value = 0" placeholder="Bijvoorbeeld 8000">
         <button class="btn" onclick="stappenOpslaan()">Opslaan</button>
         <p class="wit">Stappen: <span id="stappenTotaal">0</span></p>
@@ -55,10 +41,9 @@
         <br>
 
         <h2 class="wit">Gewicht tracker</h2>
-        <p class="wit">Vul je huidige gewicht in:</p>
         <input type="number" id="gewicht" min="0" oninput="if(this.value < 0) this.value = 0" placeholder="Bijvoorbeeld 80">
         <button class="btn" onclick="gewichtOpslaan()">Opslaan</button>
-        <p class="wit">Huidig gewicht: <span id="gewichtTotaal">0</span> kg</p>
+        <p class="wit">Gewicht: <span id="gewichtTotaal">0</span> kg</p>
 
         <br>
         <hr>
@@ -73,67 +58,9 @@
         <br>
 
         <h2 class="wit">Trainingsminuten</h2>
-        <p class="wit">Hoeveel minuten heb je getraind?</p>
         <input type="number" id="minuten" min="0" oninput="if(this.value < 0) this.value = 0" placeholder="Bijvoorbeeld 60">
         <button class="btn" onclick="minutenToevoegen()">Minuten toevoegen</button>
-        <p class="wit">Totaal aantal trainingsminuten: <span id="minutenTotaal">0</span> minuten</p>
+        <p class="wit">Trainingsminuten: <span id="minutenTotaal">0</span></p>
     </main>
-
-    <script>
-        function calorieenOpslaan() {
-            let calorieen = document.getElementById("calorieen").value;
-
-            if (calorieen == "") {
-                alert("Vul eerst je calorieën in.");
-                return;
-            }
-
-            document.getElementById("calorieenTotaal").textContent = calorieen;
-        }
-
-        function stappenOpslaan() {
-            let stappen = document.getElementById("stappen").value;
-
-            if (stappen == "") {
-                alert("Vul eerst je stappen in.");
-                return;
-            }
-
-            document.getElementById("stappenTotaal").textContent = stappen;
-        }
-
-        function gewichtOpslaan() {
-            let gewicht = document.getElementById("gewicht").value;
-
-            if (gewicht == "") {
-                alert("Vul eerst je gewicht in.");
-                return;
-            }
-
-            document.getElementById("gewichtTotaal").textContent = gewicht;
-        }
-
-        let aantalWorkouts = 0;
-
-        function workoutTellerToevoegen() {
-            aantalWorkouts = aantalWorkouts + 1;
-            document.getElementById("workoutTeller").textContent = aantalWorkouts;
-        }
-
-        let totaalMinuten = 0;
-
-        function minutenToevoegen() {
-            let minuten = document.getElementById("minuten").value;
-
-            if (minuten == "") {
-                alert("Vul eerst het aantal minuten in.");
-                return;
-            }
-
-            totaalMinuten = totaalMinuten + Number(minuten);
-            document.getElementById("minutenTotaal").textContent = totaalMinuten;
-            document.getElementById("minuten").value = "";
-        }
-    </script>
 </body>
 </html>
