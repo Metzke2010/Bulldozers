@@ -1,5 +1,6 @@
 let aantalWorkouts = 0;
 let totaalMinuten = 0;
+let totaalGewicht = 0;
 
 function calorieenOpslaan() {
     let calorieen = document.getElementById("calorieen").value;
