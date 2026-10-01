@@ -99,6 +99,7 @@ function updatePaginaWorkouts() {
     document.getElementById("workoutHuidig").innerText = workouts;
     let workoutPercentage = (workouts / workoutDoel) * 100;
     document.getElementById("workoutBalk").style.width = workoutPercentage + "%";
+    updatePaginaTotaal();
 }
 
 function updatePaginaStappen() {
@@ -107,6 +108,7 @@ function updatePaginaStappen() {
     document.getElementById("stappenHuidig").innerText = stappen;
     let stappenPercentage = (stappen / stappenDoel) * 100;
     document.getElementById("stappenBalk").style.width = stappenPercentage + "%";
+    updatePaginaTotaal();
 }
 
 function updatePaginaTotaal() {
