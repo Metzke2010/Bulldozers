@@ -64,6 +64,7 @@ function eigenWorkoutToevoegen() {
 let workouts = 0;
 let stappen = 0;
 let totaalstappen = 0;
+let totaalcalorien = 0;
 
 function voegTrainingToeWorkouts() {
     workouts++;
@@ -78,6 +79,16 @@ function voegTrainingToeStappen() {
     totaalstappen = totaalstappen + Number(stappenToevoegen);
     document.getElementById("stappenToevoegen").value = "";
     updatePaginaStappen();
+}
+function voegTrainingToeCalorien() {
+    let calorienToevoegen = Number(document.getElementById("calorienToevoegen").value);
+    if (calorienToevoegen < 1) {
+        alert("Vul een doel in dat groter is dan 0!");
+        return;
+    }
+    totaalcalorien = totaalcalorien + Number(calorienToevoegen);
+    document.getElementById("calorienToevoegen").value = "";
+    updatePaginaCalorien();
 }
 
 function doelenOpslaanWorkouts() {
@@ -100,6 +111,16 @@ function doelenOpslaanStappen() {
     updatePaginaStappen();
 }
 
+function doelenOpslaanCalorien() {
+    let calorienDoel = Number(document.getElementById("nieuwCalorienDoel").value);
+    if (calorienDoel < 1) {
+        alert("Vul een doel in dat groter is dan 0!");
+        return;
+    }
+    document.getElementById("calorienDoel").innerText = calorienDoel;
+    updatePaginaCalorien();
+}
+
 function updatePaginaWorkouts() {
     let workoutDoel = Number(document.getElementById("workoutDoel").innerText);
     workouts = Math.min(workouts, workoutDoel);
@@ -118,8 +139,17 @@ function updatePaginaStappen() {
     updatePaginaTotaal();
 }
 
+function updatePaginaCalorien() {
+    let calorienDoel = Number(document.getElementById("calorienDoel").innerText);
+    calorien = Math.min(totaalcalorien, calorienDoel);
+    document.getElementById("calorienHuidig").innerText = calorien;
+    let calorienPercentage = (totaalcalorien / calorienDoel) * 100;
+    document.getElementById("calorienBalk").style.width = calorienPercentage + "%";
+    updatePaginaTotaal();
+}
+
 function updatePaginaTotaal() {
-    let totaal = workoutPercentage + stappenPercentage;
+    let totaal = workoutPercentage + stappenPercentage + calorienPercentage;
     document.getElementById("percentage").innerText = Math.round(totaal) + "%";
     document.getElementById("totalebalk").style.width = totaal + "%";
 }

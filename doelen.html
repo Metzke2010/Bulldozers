@@ -51,6 +51,15 @@
         </div>
 
         <div class="kaart">
+            <h2>Mijn caloriendoelen aanpassen</h2>
+
+            <p>Aantal caloriën per week:</p>
+            <input type="number" id="nieuwCalorienDoel" value="4" min="1">
+
+            <button onclick="doelenOpslaanCalorien()">Caloriën opslaan</button>
+        </div>
+
+        <div class="kaart">
             <div class="doel">
                 <div>
                     <h3>Workouts</h3>
@@ -84,6 +93,25 @@
                 <div class="balk" id="stappenBalk" style="width:0%"></div>
             </div>
         </div>
+
+        <div class="kaart">
+            <div class="doel">
+                <div>
+                    <h3>Caloriën</h3>
+                    <p>
+                        <span id="calorienHuidig">0</span> /
+                        <span id="calorienDoel">0</span> calorien
+                    </p>
+                </div>
+                <input type="number" id="calorienToevoegen" value="4" min="1">
+                <button onclick="voegTrainingToeCalorien()">+</button>
+            </div>
+
+            <div class="voortgang">
+                <div class="balk" id="calorienBalk" style="width:0%"></div>
+            </div>
+        </div>
+
     </div>
 
     
