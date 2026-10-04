@@ -33,6 +33,24 @@
         </div>
 
         <div class="kaart">
+            <h2>Mijn workoutdoelen aanpassen</h2>
+
+            <p>Aantal trainingen per week:</p>
+            <input type="number" id="nieuwWorkoutDoel" value="4" min="1">
+
+            <button onclick="doelenOpslaanWorkouts()">Doelen opslaan</button>
+        </div>
+
+        <div class="kaart">
+            <h2>Mijn stappendoelen aanpassen</h2>
+
+            <p>Aantal stappen per week:</p>
+            <input type="number" id="nieuwStappenDoel" value="4" min="1">
+
+            <button onclick="doelenOpslaanStappen()">Doelen opslaan</button>
+        </div>
+
+        <div class="kaart">
             <div class="doel">
                 <div>
                     <h3>Workouts</h3>
@@ -41,7 +59,6 @@
                         <span id="workoutDoel">0</span> trainingen
                     </p>
                 </div>
-
                 <button onclick="voegTrainingToeWorkouts()">+</button>
             </div>
 
@@ -59,31 +76,13 @@
                         <span id="stappenDoel">0</span> stappen
                     </p>
                 </div>
-
+                <input type="number" id="stappenToevoegen" value="4" min="1">
                 <button onclick="voegTrainingToeStappen()">+</button>
             </div>
 
             <div class="voortgang">
                 <div class="balk" id="stappenBalk" style="width:0%"></div>
             </div>
-        </div>
-
-        <div class="kaart">
-            <h2>Mijn workoutdoelen aanpassen</h2>
-
-            <p>Aantal trainingen per week:</p>
-            <input type="number" id="nieuwWorkoutDoel" value="4" min="1">
-
-            <button onclick="doelenOpslaanWorkouts()">Doelen opslaan</button>
-        </div>
-
-        <div class="kaart">
-            <h2>Mijn stappendoelen aanpassen</h2>
-
-            <p>Aantal stappen per week:</p>
-            <input type="number" id="nieuwStappenDoel" value="4" min="1">
-
-            <button onclick="doelenOpslaanStappen()">Doelen opslaan</button>
         </div>
     </div>
 

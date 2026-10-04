@@ -63,13 +63,20 @@ function eigenWorkoutToevoegen() {
 
 let workouts = 0;
 let stappen = 0;
+let totaalstappen = 0;
 
 function voegTrainingToeWorkouts() {
     workouts++;
     updatePaginaWorkouts();
 }
 function voegTrainingToeStappen() {
-    stappen++;
+    let stappenToevoegen = Number(document.getElementById("stappenToevoegen").value);
+    if (stappenToevoegen < 1) {
+        alert("Vul een doel in dat groter is dan 0!");
+        return;
+    }
+    totaalstappen = totaalstappen + Number(stappenToevoegen);
+    document.getElementById("stappenToevoegen").value = "";
     updatePaginaStappen();
 }
 
@@ -104,9 +111,9 @@ function updatePaginaWorkouts() {
 
 function updatePaginaStappen() {
     let stappenDoel = Number(document.getElementById("stappenDoel").innerText);
-    stappen = Math.min(stappen, stappenDoel);
+    stappen = Math.min(totaalstappen, stappenDoel);
     document.getElementById("stappenHuidig").innerText = stappen;
-    let stappenPercentage = (stappen / stappenDoel) * 100;
+    let stappenPercentage = (totaalstappen / stappenDoel) * 100;
     document.getElementById("stappenBalk").style.width = stappenPercentage + "%";
     updatePaginaTotaal();
 }
