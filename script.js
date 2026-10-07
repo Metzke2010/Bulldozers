@@ -127,7 +127,6 @@ function updatePaginaWorkouts() {
     document.getElementById("workoutHuidig").innerText = workouts;
     let workoutPercentage = (workouts / workoutDoel) * 100;
     document.getElementById("workoutBalk").style.width = workoutPercentage + "%";
-    updatePaginaTotaal();
 }
 
 function updatePaginaStappen() {
@@ -136,7 +135,6 @@ function updatePaginaStappen() {
     document.getElementById("stappenHuidig").innerText = stappen;
     let stappenPercentage = (totaalstappen / stappenDoel) * 100;
     document.getElementById("stappenBalk").style.width = stappenPercentage + "%";
-    updatePaginaTotaal();
 }
 
 function updatePaginaCalorien() {
@@ -145,11 +143,4 @@ function updatePaginaCalorien() {
     document.getElementById("calorienHuidig").innerText = calorien;
     let calorienPercentage = (totaalcalorien / calorienDoel) * 100;
     document.getElementById("calorienBalk").style.width = calorienPercentage + "%";
-    updatePaginaTotaal();
-}
-
-function updatePaginaTotaal() {
-    let totaal = workoutPercentage + stappenPercentage + calorienPercentage;
-    document.getElementById("percentage").innerText = Math.round(totaal) + "%";
-    document.getElementById("totalebalk").style.width = totaal + "%";
 }
