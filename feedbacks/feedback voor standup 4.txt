@@ -1,0 +1,20 @@
+oude feedback:
+
+workout toevoegen / overzicht - invoer balkjes te klein en de tekst erin niet goed zichtbaar
+navigatiebalk - logo linksboven?
+workouts uitleg - loopt een beetje vast en kan beter afgewerkt worden (fout 153) (gedaan)
+doelen - meer opties van workouts aan doelen, niet alleen +1 workout (gedaan)
+workout toevoegen - maak de tellers de nieuwe waarde optellen bij elkaar (gedaan)
+workout toevoegen - +1 workout teller werkt niet (gedaan)
+overzicht / doelen - laat de waardes samenwerken (geschrapt) nu losse balkjes
+
+nieuwe feedback:
+
+overzicht - invoer balkjes te klein en de tekst erin niet goed zichtbaar
+navigatiebalk - logo linksboven?
+workout toevoegen - laat de workouts naar overzicht gaan
+overzicht - tabellen, grafieken etc.
+overzicht/doelen - laat de waardes verbinden (stappenteller in overzicht zorgt voor progressie in doelen en andersom)
+javascript - laat alles opslaan in de browser
+workout uitleg - misschien ook meer beginner-vriendelijke / simple workouts. denk aan pushups of squats
+workout uitleg - maak (als mogelijk en de vorige is gedaan) een categorie beginner en gevorederde met de bijbehorende informatie
