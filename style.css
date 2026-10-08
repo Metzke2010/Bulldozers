@@ -302,3 +302,35 @@ input {
 .youtube-knop:hover {
     background-color: #cc0000;
 }
+.workout-box {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.workout-box select {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.workout-box input {
+    width: 280px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.workout-box .btn {
+    margin-top: 10px;
+}
+
+#workoutLijst {
+    color: white;
+}
+
+#workoutLijst li {
+    margin-top: 8px;
+}
