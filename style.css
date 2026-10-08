@@ -302,35 +302,84 @@ input {
 .youtube-knop:hover {
     background-color: #cc0000;
 }
-.workout-box {
-    background-color: #1f1f1f;
-    padding: 20px;
-    margin-top: 25px;
-    border-radius: 10px;
-}
+/* Workout toevoegen pagina */
 
-.workout-box select {
-    width: 300px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-.workout-box input {
-    width: 280px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-.workout-box .btn {
-    margin-top: 10px;
-}
-
-#workoutLijst {
+.workout-pagina {
+    background-image: url("images/achtergrond.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
 }
 
-#workoutLijst li {
-    margin-top: 8px;
+.workout-pagina .container {
+    width: 70%;
+    margin: auto;
+}
+
+.workout-pagina h1 {
+    color: white;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.workout-pagina .workout-box {
+    background-color: rgba(91, 20, 160, 0.75);
+    padding: 30px;
+    margin-top: 25px;
+    border-radius: 20px;
+}
+
+.workout-pagina .workout-box h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.workout-pagina .workout-box p {
+    color: white;
+    font-size: 18px;
+}
+
+.workout-pagina select {
+    width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+}
+
+.workout-pagina input {
+    width: 280px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.workout-pagina .btn {
+    background-color: #b8f0d0;
+    color: #111;
+    padding: 15px 22px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.workout-pagina .btn:hover {
+    background-color: #94e5b8;
+}
+
+.workout-pagina #workoutLijst {
+    color: white;
+    font-size: 18px;
+}
+
+.workout-pagina #workoutLijst li {
+    color: white;
+    margin-top: 10px;
 }
