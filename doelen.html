@@ -21,15 +21,32 @@
     <div class="doelenhoofd">
         <h1>Mijn weekdoelen</h1>
 
+
         <div class="kaart">
-            <h2>Mijn wekelijkse voortgang</h2>
-            <h1 id="percentage">0%</h1>
+            <h2>Mijn workoutdoelen aanpassen</h2>
 
-            <div class="voortgang">
-                <div class="balk" id="totalebalk" style="width:0%"></div>
-            </div>
+            <p>Aantal trainingen per week:</p>
+            <input type="number" id="nieuwWorkoutDoel" value="4" min="1">
 
-            <p>Goed bezig!</p>
+            <button onclick="doelenOpslaanWorkouts()">Doelen opslaan</button>
+        </div>
+
+        <div class="kaart">
+            <h2>Mijn stappendoelen aanpassen</h2>
+
+            <p>Aantal stappen per week:</p>
+            <input type="number" id="nieuwStappenDoel" value="4" min="1">
+
+            <button onclick="doelenOpslaanStappen()">Doelen opslaan</button>
+        </div>
+
+        <div class="kaart">
+            <h2>Mijn caloriendoelen aanpassen</h2>
+
+            <p>Aantal caloriën per week:</p>
+            <input type="number" id="nieuwCalorienDoel" value="4" min="1">
+
+            <button onclick="doelenOpslaanCalorien()">Caloriën opslaan</button>
         </div>
 
         <div class="kaart">
@@ -38,11 +55,10 @@
                     <h3>Workouts</h3>
                     <p>
                         <span id="workoutHuidig">0</span> /
-                        <span id="workoutDoel">4</span> trainingen
+                        <span id="workoutDoel">0</span> trainingen
                     </p>
                 </div>
-
-                <button onclick="voegTrainingToe()">+</button>
+                <button onclick="voegTrainingToeWorkouts()">+</button>
             </div>
 
             <div class="voortgang">
@@ -51,13 +67,41 @@
         </div>
 
         <div class="kaart">
-            <h2>Mijn doelen aanpassen</h2>
+            <div class="doel">
+                <div>
+                    <h3>Stappen</h3>
+                    <p>
+                        <span id="stappenHuidig">0</span> /
+                        <span id="stappenDoel">0</span> stappen
+                    </p>
+                </div>
+                <input type="number" id="stappenToevoegen" value="4" min="1">
+                <button onclick="voegTrainingToeStappen()">+</button>
+            </div>
 
-            <p>Aantal trainingen per week:</p>
-            <input type="number" id="nieuwWorkoutDoel" value="4" min="1">
-
-            <button onclick="doelenOpslaan()">Doelen opslaan</button>
+            <div class="voortgang">
+                <div class="balk" id="stappenBalk" style="width:0%"></div>
+            </div>
         </div>
+
+        <div class="kaart">
+            <div class="doel">
+                <div>
+                    <h3>Caloriën</h3>
+                    <p>
+                        <span id="calorienHuidig">0</span> /
+                        <span id="calorienDoel">0</span> calorien
+                    </p>
+                </div>
+                <input type="number" id="calorienToevoegen" value="4" min="1">
+                <button onclick="voegTrainingToeCalorien()">+</button>
+            </div>
+
+            <div class="voortgang">
+                <div class="balk" id="calorienBalk" style="width:0%"></div>
+            </div>
+        </div>
+
     </div>
 
     
