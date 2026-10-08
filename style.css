@@ -28,8 +28,8 @@ body {
 
 /* Header */
 .header {
-    background: rgba(170, 0, 255, 0.485);
-    padding: 1rem 0;
+    background: rgb(74, 0, 131);
+    height: 65px;
     position: fixed;
     top: 0;
     left: 0;
@@ -44,9 +44,12 @@ body {
 
 /* Logo in navigatie */
 .logo-nav {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
+    position: absolute;
+    top: -17px;
+    left: 20px;
 }
 
 /* Navigation */
@@ -54,7 +57,8 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 1rem 0;
+    height: 65px;
+    padding: 0 0 0 120px;
 }
 
 .nav-link {
