@@ -1,66 +1,281 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Overzicht - FitBulldozers</title>
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+
+    <!-- Nodig voor de grafiek -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js" defer></script>
+
 </head>
+
+
 <body>
+
     <header class="header">
+
         <nav class="nav container">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="workouttoevoegen.html" class="nav-link">Workouts toevoegen</a>
-            <a href="overzicht.html" class="nav-link">Overzicht</a>
-            <a href="workoutuitleg.html" class="nav-link">Workouts uitleg</a>
-            <a href="doelen.html" class="nav-link">Doelen</a>
+
+            <a href="index.html" class="nav-link">
+                Home
+            </a>
+
+            <a href="workouttoevoegen.html" class="nav-link">
+                Workouts toevoegen
+            </a>
+
+            <a href="overzicht.html" class="nav-link">
+                Overzicht
+            </a>
+
+            <a href="workoutuitleg.html" class="nav-link">
+                Workouts uitleg
+            </a>
+
+            <a href="doelen.html" class="nav-link">
+                Doelen
+            </a>
+
         </nav>
+
     </header>
 
+
     <main class="container">
-        <h1 class="wit">Overzicht</h1>
-        <p class="wit">Hier kun je jouw fitnessgegevens bijhouden.</p>
 
-        <h2 class="wit">Calorieën</h2>
-        <input type="number" id="calorieen" min="0" oninput="if(this.value < 0) this.value = 0" placeholder="Bijvoorbeeld 500">
-        <button class="btn" onclick="calorieenOpslaan()">Opslaan</button>
-        <p class="wit">Calorieën: <span id="calorieenTotaal">0</span></p>
+        <h1 class="wit">
+            Overzicht
+        </h1>
+
+        <p class="wit">
+            Hier kun je jouw gewicht en trainingsvoortgang bijhouden.
+        </p>
+
+
+        <!-- ============================= -->
+        <!-- GEWICHT -->
+        <!-- ============================= -->
+
+        <h2 class="wit">
+            Gewicht tracker
+        </h2>
+
+        <input
+            type="number"
+            id="gewicht"
+            min="0"
+            step="0.1"
+            oninput="if(this.value < 0) this.value = 0"
+            placeholder="Bijvoorbeeld 80"
+        >
+
+        <button
+            class="btn"
+            onclick="gewichtOpslaan()"
+        >
+            Opslaan
+        </button>
+
+        <p class="wit">
+            Gewicht:
+            <span id="gewichtTotaal">0</span> kg
+        </p>
+
 
         <br>
         <hr>
         <br>
 
-        <h2 class="wit">Stappenteller</h2>
-        <input type="number" id="stappen" min="0" oninput="if(this.value < 0) this.value = 0" placeholder="Bijvoorbeeld 8000">
-        <button class="btn" onclick="stappenOpslaan()">Opslaan</button>
-        <p class="wit">Stappen: <span id="stappenTotaal">0</span></p>
+
+        <!-- ================================================= -->
+        <!-- VOORTGANG PER OEFENING -->
+        <!-- ================================================= -->
+
+        <h2 class="wit">
+            Voortgang per oefening
+        </h2>
+
+        <p class="wit">
+            Kies een oefening en vul in hoeveel kilogram
+            en hoeveel herhalingen je hebt gedaan.
+        </p>
+
+
+        <!-- OEFENING KIEZEN -->
+
+        <select id="grafiekOefening">
+
+            <option value="">
+                Kies een oefening
+            </option>
+
+            <option value="Incline Chest Press">
+                Incline Chest Press
+            </option>
+
+            <option value="Flat Press">
+                Flat Press
+            </option>
+
+            <option value="Shoulder Press">
+                Shoulder Press
+            </option>
+
+            <option value="Lateral Raise">
+                Lateral Raise
+            </option>
+
+            <option value="Dips">
+                Dips
+            </option>
+
+            <option value="Overhead Extension">
+                Overhead Extension
+            </option>
+
+            <option value="Tricep Pushdown">
+                Tricep Pushdown
+            </option>
+
+            <option value="Lat Pulldown">
+                Lat Pulldown
+            </option>
+
+            <option value="Upper Back Row">
+                Upper Back Row
+            </option>
+
+            <option value="Close Grip Lat Pulldown">
+                Close Grip Lat Pulldown
+            </option>
+
+            <option value="Bicep Curl">
+                Bicep Curl
+            </option>
+
+            <option value="Hammer Curl">
+                Hammer Curl
+            </option>
+
+            <option value="Chest Fly">
+                Chest Fly
+            </option>
+
+            <option value="Leg Press">
+                Leg Press
+            </option>
+
+            <option value="Squat">
+                Squat
+            </option>
+
+            <option value="RDL">
+                RDL
+            </option>
+
+            <option value="Leg Extension">
+                Leg Extension
+            </option>
+
+            <option value="Leg Curl">
+                Leg Curl
+            </option>
+
+            <option value="Calf Raise">
+                Calf Raise
+            </option>
+
+        </select>
+
 
         <br>
-        <hr>
         <br>
 
-        <h2 class="wit">Gewicht tracker</h2>
-        <input type="number" id="gewicht" min="0" oninput="if(this.value < 0) this.value = 0" placeholder="Bijvoorbeeld 80">
-        <button class="btn" onclick="gewichtOpslaan()">Opslaan</button>
-        <p class="wit">Gewicht: <span id="gewichtTotaal">0</span> kg</p>
+
+        <!-- KG -->
+
+        <input
+            type="number"
+            id="grafiekKg"
+            min="0"
+            step="0.5"
+            placeholder="Kg"
+        >
+
+
+        <!-- HERHALINGEN -->
+
+        <input
+            type="number"
+            id="grafiekHerhalingen"
+            min="1"
+            step="1"
+            placeholder="Herhalingen"
+        >
+
+
+        <!-- TOEVOEGEN -->
+
+        <button
+            class="btn"
+            type="button"
+            onclick="oefeningResultaatToevoegen()"
+        >
+            Toevoegen
+        </button>
+
 
         <br>
-        <hr>
         <br>
 
-        <h2 class="wit">Workout teller</h2>
-        <p class="wit">Aantal workouts: <span id="workoutTeller">0</span></p>
-        <button class="btn" onclick="workoutTellerToevoegen()">Workout +1</button>
 
-        <br><br>
-        <hr>
+        <!-- ================================================= -->
+        <!-- GRAFIEK -->
+        <!-- ================================================= -->
+
+        <div
+            style="
+                width: 100%;
+                height: 450px;
+                background: rgba(0,0,0,0.25);
+                padding: 20px;
+                border-radius: 15px;
+            "
+        >
+
+            <canvas id="oefeningGrafiek"></canvas>
+
+        </div>
+
+
         <br>
 
-        <h2 class="wit">Trainingsminuten</h2>
-        <input type="number" id="minuten" min="0" oninput="if(this.value < 0) this.value = 0" placeholder="Bijvoorbeeld 60">
-        <button class="btn" onclick="minutenToevoegen()">Minuten toevoegen</button>
-        <p class="wit">Trainingsminuten: <span id="minutenTotaal">0</span></p>
+
+        <!-- ================================================= -->
+        <!-- OPGESLAGEN TRAININGEN -->
+        <!-- ================================================= -->
+
+        <h3 class="wit">
+            Opgeslagen trainingen
+        </h3>
+
+        <ul
+            id="oefeningTrainingen"
+            class="wit"
+        ></ul>
+
+
     </main>
+
 </body>
+
 </html>
