@@ -20,7 +20,7 @@ OPMAAK - CSS
 OPLSAAN/BEREKENINGEN - JAVASCRIPT
 - gegevens opslaan
 - gegevens ophalen
-- gegevens berekenen
+- gegevens berekenen 
 - doelen bijhouden
-- grafieken
+- grafieken ali
 - doelenbalkje informatie
