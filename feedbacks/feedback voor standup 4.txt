@@ -18,3 +18,4 @@ overzicht/doelen - laat de waardes verbinden (stappenteller in overzicht zorgt v
 javascript - laat alles opslaan in de browser
 workout uitleg - misschien ook meer beginner-vriendelijke / simple workouts. denk aan pushups of squats
 workout uitleg - maak (als mogelijk en de vorige is gedaan) een categorie beginner en gevorederde met de bijbehorende informatie
+navigatiebalkje - maak het zodat hij bovenaan de website blijft en niet meebeweegt met het scherm
