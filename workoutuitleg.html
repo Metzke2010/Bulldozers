@@ -1,343 +1,256 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FitBulldozer - Workouts uitleg</title>
+    <title>Workouts uitleg - FitBulldozer</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+
+    <style>
+
+        .oefeningen {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .oefening {
+            background-color: #222;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .oefening img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .oefening h2 {
+            color: white;
+        }
+
+        .oefening a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 700px) {
+
+            .oefeningen {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-    <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="workouttoevoegen.html" class="nav-link">Workouts toevoegen</a>
-            <a href="overzicht.html" class="nav-link">Overzicht</a>
-            <a href="workoutuitleg.html" class="nav-link">Workouts uitleg</a>
-            <a href="doelen.html" class="nav-link">Doelen</a>
-        </nav>
-    </header>
+<header class="header">
 
-    <main class="uitleg-container">
+    <nav class="nav container">
 
-    <h1 class="pagina-titel" style="color: white;">Uitleg van de oefeningen</h1>
+        <a href="index.html" class="nav-link">Home</a>
 
-        <section class="oefening">
-            <h2>Incline Chest Press</h2>
+        <a href="workouttoevoegen.html" class="nav-link">
+            Workouts toevoegen
+        </a>
 
-            <p>
-                Bij de incline chest press duw je het gewicht vanaf een schuine positie
-                naar voren. De oefening richt zich voornamelijk op het bovenste gedeelte
-                van de borstspieren. Ook de triceps en voorkant van de schouders helpen mee.
-                Houd je rug tegen de leuning en voer de beweging gecontroleerd uit.
-            </p>
+        <a href="overzicht.html" class="nav-link">
+            Overzicht
+        </a>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/VesHgJR14E8"
-                title="Incline Chest Press uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
+        <a href="workoutuitleg.html" class="nav-link">
+            Workouts uitleg
+        </a>
+
+        <a href="doelen.html" class="nav-link">
+            Doelen
+        </a>
+
+    </nav>
+
+</header>
 
 
-        <section class="oefening">
-            <h2>Flat Press</h2>
+<main class="container">
 
-            <p>
-                De flat press is een drukoefening waarbij je het gewicht vanaf een vlakke
-                bank omhoog duwt. De oefening traint voornamelijk de borstspieren en
-                daarnaast de triceps en voorkant van de schouders.
-            </p>
+    <h1 class="pagina-titel" style="color: white;">
+        Uitleg van de oefeningen
+    </h1>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/zubTrcIIl74"
-                title="Flat Bench Press uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
 
-        <section class="oefening">
-            <h2>Shoulder Press</h2>
+    <div class="oefeningen">
 
-            <p>
-                Bij de shoulder press duw je het gewicht vanaf schouderhoogte omhoog.
-                De oefening richt zich vooral op de schouders. Houd je rug tegen de
-                leuning en beweeg het gewicht gecontroleerd omhoog en omlaag.
-            </p>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/xDnOlHT950k"
-                title="Shoulder Press uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/tu4o4quPv2k" target="_blank">
+                <img src="Abducter.webp" alt="Abducter">
+                <h2>Abductor</h2>
+            </a>
+        </div>
 
-        <section class="oefening">
-            <h2>Lateral Raise</h2>
 
-            <p>
-                Bij een lateral raise breng je de gewichten vanuit je zij omhoog tot
-                ongeveer schouderhoogte. Hiermee train je voornamelijk de zijkant van
-                de schouders. Gebruik een gecontroleerde beweging en zwaai niet met
-                het gewicht.
-            </p>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/XjrsqShr-Ic" target="_blank">
+                <img src="Bench press.webp" alt="Bench Press">
+                <h2>Bench Press</h2>
+            </a>
+        </div>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/hgLpdwMtEEs"
-                title="Lateral Raise uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
 
-        <section class="oefening">
-            <h2>Dips</h2>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/MKWBV29S6c0" target="_blank">
+                <img src="biceps curl.webp" alt="Biceps Curl">
+                <h2>Biceps Curl</h2>
+            </a>
+        </div>
 
-            <p>
-                Bij dips laat je jezelf gecontroleerd zakken en duw je jezelf daarna
-                weer omhoog. De oefening traint vooral de triceps, borst en schouders.
-                Zorg ervoor dat je de beweging gecontroleerd uitvoert.
-            </p>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/OKQd40AGP5w"
-                title="Dips uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/wdOkFomQNp8" target="_blank">
+                <img src="Calve raises.jpg" alt="Calve Raises">
+                <h2>Calve Raises</h2>
+            </a>
+        </div>
 
-        <section class="oefening">
-            <h2>Overhead Extension</h2>
 
-            <p>
-                Bij de overhead extension houd je het gewicht boven je hoofd en buig
-                je voornamelijk je ellebogen. Hierdoor worden vooral de triceps belast.
-                Houd je bovenarmen zo stabiel mogelijk tijdens de beweging.
-            </p>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/jXRxMJhOCc0" target="_blank">
+                <img src="Close grip lat pulldown.jpg" alt="Close Grip Lat Pulldown">
+                <h2>Close Grip Lat Pulldown</h2>
+            </a>
+        </div>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/Zwki-Vo9_q4"
-                title="Overhead Tricep Extension uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
 
-        <section class="oefening">
-            <h2>Tricep Pushdown</h2>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/CrbIq-T-h8I" target="_blank">
+                <img src="Dips.jpg" alt="Dips">
+                <h2>Dips</h2>
+            </a>
+        </div>
 
-            <p>
-                Bij de tricep pushdown duw je een kabel vanaf ongeveer borsthoogte
-                naar beneden. De oefening richt zich voornamelijk op de triceps.
-                Houd je ellebogen dicht bij je lichaam en beweeg vooral je onderarmen.
-            </p>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/GCa8Q4e7laU"
-                title="Tricep Pushdown uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/VuEclXR7sZY" target="_blank">
+                <img src="Hammer curl.webp" alt="Hammer Curl">
+                <h2>Hammer Curl</h2>
+            </a>
+        </div>
 
-        <section class="oefening">
-            <h2>Lat Pulldown</h2>
 
-            <p>
-                Bij de lat pulldown trek je een stang van boven naar je borst.
-                De oefening traint voornamelijk de brede rugspieren. Ook de biceps
-                en andere spieren van de bovenrug helpen mee.
-            </p>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/8fXfwG4ftaQ" target="_blank">
+                <img src="Incline chest press.jpg" alt="Incline Chest Press">
+                <h2>Incline Chest Press</h2>
+            </a>
+        </div>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/D8b3OVbRfwE"
-                title="Lat Pulldown uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
 
-        <section class="oefening">
-            <h2>Upper Back Row</h2>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/bNmvKpJSWKM" target="_blank">
+                <img src="Lat pulldown.webp" alt="Lat Pulldown">
+                <h2>Lat Pulldown</h2>
+            </a>
+        </div>
 
-            <p>
-                Bij een upper back row trek je het handvat naar je lichaam toe.
-                Hierbij worden vooral de spieren van de bovenrug getraind.
-                Houd je rug stabiel en trek je schouderbladen gecontroleerd naar elkaar.
-            </p>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/gmy4V8yJszs"
-                title="Upper Back Row uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/Kl3LEzQ5Zqs" target="_blank">
+                <img src="Lateral raise.webp" alt="Lateral Raise">
+                <h2>Lateral Raise</h2>
+            </a>
+        </div>
 
-        <section class="oefening">
-            <h2>Close Grip Lat Pulldown</h2>
 
-            <p>
-                De close grip lat pulldown is een variant van de normale lat pulldown.
-                Je gebruikt hierbij een smallere greep. De oefening traint voornamelijk
-                de rug en daarnaast de biceps.
-            </p>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/_lgE0gPvbik" target="_blank">
+                <img src="Leg curl.jpg" alt="Leg Curl">
+                <h2>Leg Curl</h2>
+            </a>
+        </div>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/IjoFCmLX7z0"
-                title="Close Grip Lat Pulldown uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
 
-        <section class="oefening">
-            <h2>Bicep Curl</h2>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/uM86QE59Tgc" target="_blank">
+                <img src="Leg extension.webp" alt="Leg Extension">
+                <h2>Leg Extension</h2>
+            </a>
+        </div>
 
-            <p>
-                Bij de bicep curl buig je je elleboog terwijl je een gewicht omhoog
-                brengt. De belangrijkste spier die hierbij wordt getraind is de biceps.
-                Houd je ellebogen zo veel mogelijk op dezelfde plaats en voorkom dat
-                je met je lichaam zwaait.
-            </p>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/YsnheXvmQ78"
-                title="Bicep Curl uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/EotSw18oR9w" target="_blank">
+                <img src="Leg Press.webp" alt="Leg Press">
+                <h2>Leg Press</h2>
+            </a>
+        </div>
 
-        <section class="oefening">
-            <h2>Hammer Curl</h2>
 
-            <p>
-                De hammer curl lijkt op een normale bicep curl, maar je handpalmen
-                blijven naar elkaar gericht. Hierdoor worden naast de biceps ook
-                verschillende spieren van de onderarm en bovenarm belast.
-            </p>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/9Ark9S11uXw" target="_blank">
+                <img src="Overhead triceb extentions.webp" alt="Overhead Triceb Extentions">
+                <h2>Overhead Tricep Extension</h2>
+            </a>
+        </div>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/TwD-YGVP4Bk"
-                title="Hammer Curl uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
 
-        <section class="oefening">
-            <h2>Chest Fly</h2>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/hu3jRvTc_po" target="_blank">
+                <img src="RDL.webp" alt="RDL">
+                <h2>RDL</h2>
+            </a>
+        </div>
 
-            <p>
-                Bij de chest fly breng je je armen vanuit een geopende positie naar
-                elkaar toe. De oefening richt zich voornamelijk op de borstspieren.
-                Voer de beweging rustig uit en houd je bovenlichaam stabiel.
-            </p>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/Dbly77Jgbo8"
-                title="Chest Fly uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/k6tzKisR3NY" target="_blank">
+                <img src="shoulder press.jpg" alt="Shoulder Press">
+                <h2>Shoulder Press</h2>
+            </a>
+        </div>
 
-        <section class="oefening">
-            <h2>Leg Press</h2>
 
-            <p>
-                Bij de leg press duw je een platform van je af met je benen.
-                De oefening traint voornamelijk de bovenbenen en bilspieren.
-                Houd je voeten stabiel en voer de beweging gecontroleerd uit.
-            </p>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/dW3zj79xfrc" target="_blank">
+                <img src="Squat.webp" alt="Squat">
+                <h2>Squat</h2>
+            </a>
+        </div>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/hiI-JdtEGIs"
-                title="Leg Press uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
 
-        <section class="oefening">
-            <h2>Squat</h2>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/1FjkhpZsaxc" target="_blank">
+                <img src="tricep pushdown.webp" alt="Tricep Pushdown">
+                <h2>Tricep Pushdown</h2>
+            </a>
+        </div>
 
-            <p>
-                Bij een squat zak je vanuit een staande positie door je knieën en heupen
-                en kom je daarna weer omhoog. De oefening traint vooral de benen en
-                bilspieren. Houd je romp stabiel en voer de beweging gecontroleerd uit.
-            </p>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/R0XCXM2bdXs"
-                title="Squat uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
+        <div class="oefening">
+            <a href="https://www.youtube.com/shorts/vqPY3fDessY" target="_blank">
+                <img src="Upper back rows.jpg" alt="Upper Back Row">
+                <h2>Upper Back Row</h2>
+            </a>
+        </div>
 
-        <section class="oefening">
-            <h2>RDL</h2>
+    </a>
 
-            <p>
-                RDL staat voor Romanian Deadlift. Je begint rechtop en beweegt je
-                heupen naar achteren terwijl je het gewicht langs je benen laat zakken.
-                Vooral de hamstrings en bilspieren worden hierbij belast.
-            </p>
+</div>
 
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/fOvQ6wZ75sc"
-                title="Romanian Deadlift uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
+    </div>
 
-        <section class="oefening">
-            <h2>Leg Extension</h2>
-
-            <p>
-                Bij de leg extension strek je je knieën vanuit een zittende positie
-                tegen weerstand. De oefening richt zich voornamelijk op de quadriceps,
-                de spieren aan de voorkant van je bovenbenen.
-            </p>
-
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/Dllq4Vd-Xek"
-                title="Leg Extension uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
-
-        <section class="oefening">
-            <h2>Leg Curl</h2>
-
-            <p>
-                Bij de leg curl buig je je knieën tegen weerstand. Hiermee train je
-                voornamelijk de hamstrings aan de achterkant van je bovenbenen.
-                Houd je lichaam stabiel en voer de beweging gecontroleerd uit.
-            </p>
-
-            <iframe
-                class="video"
-                src="https://www.youtube.com/embed/rYon2i8I6C8"
-                title="Leg Curl uitleg"
-                allowfullscreen>
-            </iframe>
-        </section>
-
-    </main>
+</main>
 
 </body>
+
 </html>
