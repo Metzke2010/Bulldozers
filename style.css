@@ -30,8 +30,10 @@ body {
 .header {
     background: rgba(170, 0, 255, 0.485);
     padding: 1rem 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -40,12 +42,17 @@ body {
     height: auto;
 }
 
-
+/* Logo in navigatie */
+.logo-nav {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
 
 /* Navigation */
 .nav {
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 2rem;
     padding: 1rem 0;
 }
@@ -165,21 +172,43 @@ input:focus {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
     .nav {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        gap: 1rem;
+        justify-content: flex-start;
+        gap: 5px;
+        padding: 0.5rem 0;
+        overflow-x: auto;
+        white-space: nowrap;
     }
-    
+
+    .logo-nav {
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
+    }
+
+    .nav-link {
+        padding: 0.4rem 0.5rem;
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+
+    .hero {
+        padding-top: 10rem;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
-    
+
     .overlay {
         padding: 1rem;
     }
-    
+
 }
+
 .wit {
     color: white;
    
@@ -250,7 +279,7 @@ input {
     width: 80px;
 }
 
- .uitleg-container {
+.uitleg-container {
     width: 90%;
     max-width: 1100px;
     margin: 40px auto;
@@ -305,6 +334,7 @@ input {
 .youtube-knop:hover {
     background-color: #cc0000;
 }
+
 /* Workout toevoegen pagina */
 
 .workout-pagina {
