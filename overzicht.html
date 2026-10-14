@@ -2,9 +2,7 @@
 <html lang="nl">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Overzicht - FitBulldozers</title>
@@ -15,70 +13,57 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="script.js" defer></script>
-
 </head>
 
+<body class="overzicht-pagina">
 
-<body>
+<header class="header">
 
-<head>
+    <nav class="nav container">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <a href="index.html">
+            <img src="images/logo.png" class="logo-nav" alt="FitBulldozers logo">
+        </a>
 
-    <title>Doelen - FitBulldozers</title>
+        <a href="index.html" class="nav-link">
+            Home
+        </a>
 
-    <link rel="stylesheet" href="style.css">
+        <a href="workouttoevoegen.html" class="nav-link">
+            Workouts toevoegen
+        </a>
 
-</head>
-
-<body>
-
-    <header class="header">
-
-        <nav class="nav container">
-
-            <a href="index.html">
-                <img src="images/logo.png" class="logo-nav" alt="FitBulldozers logo">
-            </a>
-
-            <a href="index.html" class="nav-link">Home</a>
-
-            <a href="workouttoevoegen.html" class="nav-link">
-                Workouts toevoegen
-            </a>
-
-            <a href="overzicht.html" class="nav-link">
-                Overzicht
-            </a>
-
-            <a href="workoutuitleg.html" class="nav-link">
-                Workouts uitleg
-            </a>
-
-            <a href="doelen.html" class="nav-link">
-                Doelen
-            </a>
-
-        </nav>
-
-    </header>
-
-
-    <main class="container">
-
-        <h1 class="wit">
+        <a href="overzicht.html" class="nav-link">
             Overzicht
-        </h1>
+        </a>
 
-        <p class="wit">
-            Hier kun je jouw gewicht en trainingsvoortgang bijhouden.
-        </p>
+        <a href="workoutuitleg.html" class="nav-link">
+            Workouts uitleg
+        </a>
+
+        <a href="doelen.html" class="nav-link">
+            Doelen
+        </a>
+
+    </nav>
+
+</header>
 
 
-        <!-- ============================= -->
-        <!-- GEWICHT -->
-        <!-- ============================= -->
+<main class="container">
+
+    <h1 class="wit">
+        Overzicht
+    </h1>
+
+    <p class="wit">
+        Hier kun je jouw gewicht en trainingsvoortgang bekijken.
+    </p>
+
+
+    <!-- GEWICHT -->
+
+    <div class="overzicht-box">
 
         <h2 class="wit">
             Gewicht tracker
@@ -105,27 +90,20 @@
             <span id="gewichtTotaal">0</span> kg
         </p>
 
-
-        <br>
-        <hr>
-        <br>
+    </div>
 
 
-        <!-- ================================================= -->
-        <!-- VOORTGANG PER OEFENING -->
-        <!-- ================================================= -->
+    <!-- VOORTGANG PER OEFENING -->
+
+    <div class="overzicht-box">
 
         <h2 class="wit">
             Voortgang per oefening
         </h2>
 
         <p class="wit">
-            Kies een oefening en vul in hoeveel kilogram
-            en hoeveel herhalingen je hebt gedaan.
+            Kies een oefening om je voortgang te bekijken.
         </p>
-
-
-        <!-- OEFENING KIEZEN -->
 
         <select id="grafiekOefening">
 
@@ -193,6 +171,10 @@
                 Squat
             </option>
 
+            <option value="Stiff Leg Deadlift">
+                Stiff Leg Deadlift
+            </option>
+
             <option value="RDL">
                 RDL
             </option>
@@ -209,53 +191,16 @@
                 Calf Raise
             </option>
 
+            <option value="Abductor">
+                Abductor Machine
+            </option>
+
         </select>
 
-
-        <br>
-        <br>
+        <br><br>
 
 
-        <!-- KG -->
-
-        <input
-            type="number"
-            id="grafiekKg"
-            min="0"
-            step="0.5"
-            placeholder="Kg"
-        >
-
-
-        <!-- HERHALINGEN -->
-
-        <input
-            type="number"
-            id="grafiekHerhalingen"
-            min="1"
-            step="1"
-            placeholder="Herhalingen"
-        >
-
-
-        <!-- TOEVOEGEN -->
-
-        <button
-            class="btn"
-            type="button"
-            onclick="oefeningResultaatToevoegen()"
-        >
-            Toevoegen
-        </button>
-
-
-        <br>
-        <br>
-
-
-        <!-- ================================================= -->
         <!-- GRAFIEK -->
-        <!-- ================================================= -->
 
         <div
             style="
@@ -275,9 +220,7 @@
         <br>
 
 
-        <!-- ================================================= -->
         <!-- OPGESLAGEN TRAININGEN -->
-        <!-- ================================================= -->
 
         <h3 class="wit">
             Opgeslagen trainingen
@@ -286,10 +229,12 @@
         <ul
             id="oefeningTrainingen"
             class="wit"
-        ></ul>
+        >
+        </ul>
 
+    </div>
 
-    </main>
+</main>
 
 </body>
 

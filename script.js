@@ -36,29 +36,120 @@ function minutenToevoegen() {
 
 function workoutToevoegen() {
     let workout = document.getElementById("workout").value;
+    let kg = Number(document.getElementById("workoutKg").value);
+    let herhalingen = Number(document.getElementById("workoutHerhalingen").value);
+
     if (workout == "") {
         alert("Kies eerst een workout.");
         return;
     }
-    let lijst = document.getElementById("workoutLijst");
-    let nieuwItem = document.createElement("li");        
-    nieuwItem.style.color = "white";
-    nieuwItem.textContent = workout;
-    lijst.appendChild(nieuwItem);
-}
 
+    if (kg <= 0) {
+        alert("Vul het aantal kilogram in.");
+        return;
+    }
+
+    if (herhalingen <= 0) {
+        alert("Vul het aantal herhalingen in.");
+        return;
+    }
+
+    let vandaag = new Date();
+
+    let datum =
+        String(vandaag.getDate()).padStart(2, "0") + "-" +
+        String(vandaag.getMonth() + 1).padStart(2, "0") + "-" +
+        vandaag.getFullYear();
+
+    if (!oefeningData[workout]) {
+        oefeningData[workout] = [];
+    }
+
+    oefeningData[workout].push({
+        datum: datum,
+        kg: kg,
+        herhalingen: herhalingen
+    });
+
+    localStorage.setItem(
+        "oefeningData",
+        JSON.stringify(oefeningData)
+    );
+
+    let lijst = document.getElementById("workoutLijst");
+
+    let nieuwItem = document.createElement("li");
+
+    nieuwItem.style.color = "white";
+
+    nieuwItem.textContent =
+        workout + " - " +
+        kg + " kg x " +
+        herhalingen + " herhalingen";
+
+    lijst.appendChild(nieuwItem);
+
+    document.getElementById("workoutKg").value = "";
+    document.getElementById("workoutHerhalingen").value = "";
+}
 function eigenWorkoutToevoegen() {
     let workout = document.getElementById("eigenWorkout").value;
+    let kg = Number(document.getElementById("eigenWorkoutKg").value);
+    let herhalingen = Number(document.getElementById("eigenWorkoutHerhalingen").value);
+
     if (workout == "") {
         alert("Vul eerst een workout in.");
         return;
     }
+
+    if (kg <= 0) {
+        alert("Vul het aantal kilogram in.");
+        return;
+    }
+
+    if (herhalingen <= 0) {
+        alert("Vul het aantal herhalingen in.");
+        return;
+    }
+
+    let vandaag = new Date();
+
+    let datum =
+        String(vandaag.getDate()).padStart(2, "0") + "-" +
+        String(vandaag.getMonth() + 1).padStart(2, "0") + "-" +
+        vandaag.getFullYear();
+
+    if (!oefeningData[workout]) {
+        oefeningData[workout] = [];
+    }
+
+    oefeningData[workout].push({
+        datum: datum,
+        kg: kg,
+        herhalingen: herhalingen
+    });
+
+    localStorage.setItem(
+        "oefeningData",
+        JSON.stringify(oefeningData)
+    );
+
     let lijst = document.getElementById("workoutLijst");
+
     let nieuwItem = document.createElement("li");
-    nieuwItem.classList.add("wit");
-    nieuwItem.textContent = workout;
+
+    nieuwItem.style.color = "white";
+
+    nieuwItem.textContent =
+        workout + " - " +
+        kg + " kg x " +
+        herhalingen + " herhalingen";
+
     lijst.appendChild(nieuwItem);
+
     document.getElementById("eigenWorkout").value = "";
+    document.getElementById("eigenWorkoutKg").value = "";
+    document.getElementById("eigenWorkoutHerhalingen").value = "";
 }
 
 let workouts = 0;
@@ -167,69 +258,7 @@ let huidigeGrafiek = null;
 // OEFENING TOEVOEGEN
 // ==========================================
 
-function oefeningResultaatToevoegen() {
 
-    let oefening = document.getElementById("grafiekOefening").value;
-    let kg = Number(document.getElementById("grafiekKg").value);
-    let herhalingen = Number(document.getElementById("grafiekHerhalingen").value);
-
-    if (oefening == "") {
-        alert("Kies eerst een oefening.");
-        return;
-    }
-
-    if (kg <= 0) {
-        alert("Vul het aantal kilogram in.");
-        return;
-    }
-
-    if (herhalingen <= 0) {
-        alert("Vul het aantal herhalingen in.");
-        return;
-    }
-
-
-    // Als de oefening nog niet bestaat
-    if (!oefeningData[oefening]) {
-        oefeningData[oefening] = [];
-    }
-
-
-    // Datum
-    let vandaag = new Date();
-
-    let datum =
-        String(vandaag.getDate()).padStart(2, "0") +
-        "-" +
-        String(vandaag.getMonth() + 1).padStart(2, "0") +
-        "-" +
-        vandaag.getFullYear();
-
-
-    // Gegevens toevoegen
-    oefeningData[oefening].push({
-        datum: datum,
-        kg: kg,
-        herhalingen: herhalingen
-    });
-
-
-    // OPSLAAN
-    localStorage.setItem(
-        "oefeningData",
-        JSON.stringify(oefeningData)
-    );
-
-
-    // Invoervelden leegmaken
-    document.getElementById("grafiekKg").value = "";
-    document.getElementById("grafiekHerhalingen").value = "";
-
-
-    // Grafiek en lijst vernieuwen
-    toonOefeningGrafiek(oefening);
-    toonOpgeslagenTrainingen(oefening);
-}
 
 
 // ==========================================
@@ -243,6 +272,30 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!select) {
         return;
     }
+
+    let oefeningen = Object.keys(oefeningData);
+
+    oefeningen.forEach(function(oefening) {
+
+        let bestaatAl = false;
+
+        for (let i = 0; i < select.options.length; i++) {
+
+            if (select.options[i].value == oefening) {
+                bestaatAl = true;
+            }
+        }
+
+        if (bestaatAl == false) {
+
+            let optie = document.createElement("option");
+
+            optie.value = oefening;
+            optie.textContent = oefening;
+
+            select.appendChild(optie);
+        }
+    });
 
     select.addEventListener("change", function() {
 

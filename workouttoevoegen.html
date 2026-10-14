@@ -1,172 +1,164 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Workout toevoegen - FitBulldozers</title>
-
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="workout-pagina">
 
-<head>
+<header class="header">
+    <nav class="nav container">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <a href="index.html">
+            <img src="images/logo.png" class="logo-nav" alt="FitBulldozers logo">
+        </a>
 
-    <title>Doelen - FitBulldozers</title>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="workouttoevoegen.html" class="nav-link">Workouts toevoegen</a>
+        <a href="overzicht.html" class="nav-link">Overzicht</a>
+        <a href="workoutuitleg.html" class="nav-link">Workouts uitleg</a>
+        <a href="doelen.html" class="nav-link">Doelen</a>
 
-    <link rel="stylesheet" href="style.css">
+    </nav>
+</header>
 
-</head>
+<main class="container">
 
-<body>
+    <h1 class="wit">Workout toevoegen</h1>
 
-<head>
+    <p class="wit">
+        Kies een oefening en vul in hoeveel kilogram en herhalingen je hebt gedaan.
+    </p>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Workout kiezen -->
 
-    <title>Doelen - FitBulldozers</title>
+    <div class="workout-box">
 
-    <link rel="stylesheet" href="style.css">
+        <h2 class="wit">Kies een oefening</h2>
 
-</head>
+        <select id="workout">
 
-<body>
+            <option value="">Kies een oefening</option>
 
-    <header class="header">
+            <option value="Incline Chest Press">Incline Chest Press</option>
+            <option value="Flat Press">Flat Press</option>
 
-        <nav class="nav container">
+            <option value="Shoulder Press">Shoulder Press</option>
+            <option value="Lateral Raise">Lateral Raise</option>
 
-            <a href="index.html">
-                <img src="images/logo.png" class="logo-nav" alt="FitBulldozers logo">
-            </a>
+            <option value="Dips">Dips</option>
+            <option value="Overhead Extension">Overhead Extension</option>
+            <option value="Tricep Pushdown">Tricep Pushdown</option>
 
-            <a href="index.html" class="nav-link">Home</a>
+            <option value="Lat Pulldown">Lat Pulldown</option>
+            <option value="Upper Back Row">Upper Back Row</option>
+            <option value="Close Grip Lat Pulldown">Close Grip Lat Pulldown</option>
 
-            <a href="workouttoevoegen.html" class="nav-link">
-                Workouts toevoegen
-            </a>
+            <option value="Bicep Curl">Bicep Curl</option>
+            <option value="Hammer Curl">Hammer Curl</option>
 
-            <a href="overzicht.html" class="nav-link">
-                Overzicht
-            </a>
+            <option value="Chest Fly">Chest Fly</option>
 
-            <a href="workoutuitleg.html" class="nav-link">
-                Workouts uitleg
-            </a>
+            <option value="Leg Press">Leg Press</option>
+            <option value="Squat">Squat</option>
 
-            <a href="doelen.html" class="nav-link">
-                Doelen
-            </a>
+            <option value="Stiff Leg Deadlift">Stiff Leg Deadlift</option>
+            <option value="RDL">RDL</option>
 
-        </nav>
+            <option value="Leg Extension">Leg Extension</option>
+            <option value="Leg Curl">Leg Curl</option>
 
-    </header>
+            <option value="Calf Raise">Calf Raise</option>
+            <option value="Abductor">Abductor Machine</option>
 
-    <main class="container">
+        </select>
 
-        <h1 class="wit">Workout toevoegen</h1>
+        <br><br>
+
+        <input
+            type="number"
+            id="workoutKg"
+            min="0"
+            step="0.5"
+            placeholder="Kg"
+        >
+
+        <input
+            type="number"
+            id="workoutHerhalingen"
+            min="1"
+            step="1"
+            placeholder="Herhalingen"
+        >
+
+        <br>
+
+        <button class="btn" onclick="workoutToevoegen()">
+            Workout toevoegen
+        </button>
+
+    </div>
+
+    <!-- Eigen workout toevoegen -->
+
+    <div class="workout-box">
+
+        <h2 class="wit">Eigen workout toevoegen</h2>
 
         <p class="wit">
-            Kies een oefening uit de lijst of voeg zelf een oefening toe.
+            Staat jouw oefening niet in de lijst? Voeg hem hier zelf toe.
         </p>
 
-        <!-- Workout kiezen -->
+        <input
+            type="text"
+            id="eigenWorkout"
+            placeholder="Naam van de oefening"
+        >
 
-        <div class="workout-box">
+        <input
+            type="number"
+            id="eigenWorkoutKg"
+            min="0"
+            step="0.5"
+            placeholder="Kg"
+        >
 
-            <h2 class="wit">Kies een oefening</h2>
+        <input
+            type="number"
+            id="eigenWorkoutHerhalingen"
+            min="1"
+            step="1"
+            placeholder="Herhalingen"
+        >
 
-            <select id="workout">
-                <option value="">Kies een oefening</option>
+        <br>
 
-                <option value="Incline Chest Press">Incline Chest Press</option>
-                <option value="Flat Press">Flat Press</option>
+        <button class="btn" onclick="eigenWorkoutToevoegen()">
+            Toevoegen
+        </button>
 
-                <option value="Shoulder Press">Shoulder Press</option>
-                <option value="Lateral Raise">Lateral Raise</option>
+    </div>
 
-                <option value="Dips">Dips</option>
-                <option value="Overhead Extension">Overhead Extension</option>
-                <option value="Tricep Pushdown">Tricep Pushdown</option>
+    <!-- Mijn workout -->
 
-                <option value="Lat Pulldown">Lat Pulldown</option>
-                <option value="Upper Back Row">Upper Back Row</option>
-                <option value="Close Grip Lat Pulldown">Close Grip Lat Pulldown</option>
+    <div class="workout-box">
 
-                <option value="Bicep Curl">Bicep Curl</option>
-                <option value="Hammer Curl">Hammer Curl</option>
+        <h2 class="wit">Mijn workout</h2>
 
-                <option value="Chest Fly">Chest Fly</option>
+        <p class="wit">
+            Hier verschijnen de oefeningen die je hebt toegevoegd.
+        </p>
 
-                <option value="Leg Press">Leg Press</option>
-                <option value="Squat">Squat</option>
+        <ul id="workoutLijst">
+        </ul>
 
-                <option value="Stiff Leg Deadlift">Stiff Leg Deadlift</option>
-                <option value="Hip Hinge">RDL</option>
+    </div>
 
-                <option value="Leg Extension">Leg Extension</option>
-                <option value="Leg Curl">Leg Curl</option>
+</main>
 
-                <option value="Calf Raise">Calf Raise</option>
-                <option value="Abductor">Abductor Machine</option>
-            </select>
-
-            <br>
-
-            <button class="btn" onclick="workoutToevoegen()">
-                Workout toevoegen
-            </button>
-
-        </div>
-
-        <!-- Eigen workout toevoegen -->
-
-        <div class="workout-box">
-
-            <h2 class="wit">Eigen workout toevoegen</h2>
-
-            <p class="wit">
-                Staat jouw oefening niet in de lijst? Voeg hem hier zelf toe.
-            </p>
-
-            <input
-                type="text"
-                id="eigenWorkout"
-                placeholder="Naam van de oefening"
-            >
-
-            <br>
-
-            <button class="btn" onclick="eigenWorkoutToevoegen()">
-                Toevoegen
-            </button>
-
-        </div>
-
-        <!-- Toegevoegde workouts -->
-
-        <div class="workout-box">
-
-            <h2 class="wit">Mijn workout</h2>
-
-            <p class="wit">
-                Hier verschijnen de oefeningen die je hebt toegevoegd.
-            </p>
-
-            <ul id="workoutLijst">
-            </ul>
-
-        </div>
-
-    </main>
-
-<body class="workout-pagina"></body>
-
+</body>
 </html>
