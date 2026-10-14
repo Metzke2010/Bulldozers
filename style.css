@@ -30,13 +30,10 @@ body {
 .header {
     background: rgb(74, 0, 131);
     height: 65px;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     z-index: 1000;
 }
-
 .logo {
     width: 200px;
     height: auto;
@@ -419,4 +416,7 @@ input {
 .workout-pagina #workoutLijst li {
     color: white;
     margin-top: 10px;
+}
+html {
+    overflow-x: hidden;
 }
