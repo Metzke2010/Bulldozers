@@ -66,6 +66,10 @@ let stappen = 0;
 let totaalstappen = 0;
 let totaalcalorien = 0;
 
+let calorien = JSON.parse(
+    localStorage.getItem("calorien")
+) || {};
+
 function voegTrainingToeWorkouts() {
     workouts++;
     updatePaginaWorkouts();
@@ -119,6 +123,10 @@ function doelenOpslaanCalorien() {
     }
     document.getElementById("calorienDoel").innerText = calorienDoel;
     updatePaginaCalorien();
+    localStorage.setItem(
+        "calorienDoel",
+        JSON.stringify(calorienDoel)
+    );
 }
 
 function updatePaginaWorkouts() {
