@@ -17,224 +17,208 @@
 
 <body class="overzicht-pagina">
 
-<header class="header">
+    <header class="header">
+        <nav class="nav container">
 
-    <nav class="nav container">
+            <a href="index.html">
+                <img src="images/logo.png" class="logo-nav" alt="FitBulldozers logo">
+            </a>
 
-        <a href="index.html">
-            <img src="images/logo.png" class="logo-nav" alt="FitBulldozers logo">
-        </a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="workouttoevoegen.html" class="nav-link">Workouts toevoegen</a>
+            <a href="overzicht.html" class="nav-link">Overzicht</a>
+            <a href="workoutuitleg.html" class="nav-link">Workouts uitleg</a>
+            <a href="doelen.html" class="nav-link">Doelen</a>
 
-        <a href="index.html" class="nav-link">
-            Home
-        </a>
+        </nav>
+    </header>
 
-        <a href="workouttoevoegen.html" class="nav-link">
-            Workouts toevoegen
-        </a>
 
-        <a href="overzicht.html" class="nav-link">
+    <main class="container">
+
+        <h1 class="wit">
             Overzicht
-        </a>
-
-        <a href="workoutuitleg.html" class="nav-link">
-            Workouts uitleg
-        </a>
-
-        <a href="doelen.html" class="nav-link">
-            Doelen
-        </a>
-
-    </nav>
-
-</header>
-
-
-<main class="container">
-
-    <h1 class="wit">
-        Overzicht
-    </h1>
-
-    <p class="wit">
-        Hier kun je jouw gewicht en trainingsvoortgang bekijken.
-    </p>
-
-
-    <!-- GEWICHT -->
-
-    <div class="overzicht-box">
-
-        <h2 class="wit">
-            Gewicht tracker
-        </h2>
-
-        <input
-            type="number"
-            id="gewicht"
-            min="0"
-            step="0.1"
-            oninput="if(this.value < 0) this.value = 0"
-            placeholder="Bijvoorbeeld 80"
-        >
-
-        <button
-            class="btn"
-            onclick="gewichtOpslaan()"
-        >
-            Opslaan
-        </button>
+        </h1>
 
         <p class="wit">
-            Gewicht:
-            <span id="gewichtTotaal">0</span> kg
+            Hier kun je jouw gewicht en trainingsvoortgang bekijken.
         </p>
 
-    </div>
 
+        <!-- GEWICHT -->
 
-    <!-- VOORTGANG PER OEFENING -->
+        <div class="overzicht-box">
 
-    <div class="overzicht-box">
+            <h2 class="wit">
+                Gewicht tracker
+            </h2>
 
-        <h2 class="wit">
-            Voortgang per oefening
-        </h2>
+            <input
+                type="number"
+                id="gewicht"
+                min="0"
+                step="0.1"
+                oninput="if(this.value < 0) this.value = 0"
+                placeholder="Bijvoorbeeld 80"
+            >
 
-        <p class="wit">
-            Kies een oefening om je voortgang te bekijken.
-        </p>
+            <button
+                class="btn"
+                onclick="gewichtOpslaan()"
+            >
+                Opslaan
+            </button>
 
-        <select id="grafiekOefening">
-
-            <option value="">
-                Kies een oefening
-            </option>
-
-            <option value="Incline Chest Press">
-                Incline Chest Press
-            </option>
-
-            <option value="Flat Press">
-                Flat Press
-            </option>
-
-            <option value="Shoulder Press">
-                Shoulder Press
-            </option>
-
-            <option value="Lateral Raise">
-                Lateral Raise
-            </option>
-
-            <option value="Dips">
-                Dips
-            </option>
-
-            <option value="Overhead Extension">
-                Overhead Extension
-            </option>
-
-            <option value="Tricep Pushdown">
-                Tricep Pushdown
-            </option>
-
-            <option value="Lat Pulldown">
-                Lat Pulldown
-            </option>
-
-            <option value="Upper Back Row">
-                Upper Back Row
-            </option>
-
-            <option value="Close Grip Lat Pulldown">
-                Close Grip Lat Pulldown
-            </option>
-
-            <option value="Bicep Curl">
-                Bicep Curl
-            </option>
-
-            <option value="Hammer Curl">
-                Hammer Curl
-            </option>
-
-            <option value="Chest Fly">
-                Chest Fly
-            </option>
-
-            <option value="Leg Press">
-                Leg Press
-            </option>
-
-            <option value="Squat">
-                Squat
-            </option>
-
-            <option value="Stiff Leg Deadlift">
-                Stiff Leg Deadlift
-            </option>
-
-            <option value="RDL">
-                RDL
-            </option>
-
-            <option value="Leg Extension">
-                Leg Extension
-            </option>
-
-            <option value="Leg Curl">
-                Leg Curl
-            </option>
-
-            <option value="Calf Raise">
-                Calf Raise
-            </option>
-
-            <option value="Abductor">
-                Abductor Machine
-            </option>
-
-        </select>
-
-        <br><br>
-
-
-        <!-- GRAFIEK -->
-
-        <div
-            style="
-                width: 100%;
-                height: 450px;
-                background: rgba(0,0,0,0.25);
-                padding: 20px;
-                border-radius: 15px;
-            "
-        >
-
-            <canvas id="oefeningGrafiek"></canvas>
+            <p class="wit">
+                Gewicht:
+                <span id="gewichtTotaal">0</span> kg
+            </p>
 
         </div>
 
 
-        <br>
+        <!-- VOORTGANG PER OEFENING -->
+
+        <div class="overzicht-box">
+
+            <h2 class="wit">
+                Voortgang per oefening
+            </h2>
+
+            <p class="wit">
+                Kies een oefening om je voortgang te bekijken.
+            </p>
+
+            <select id="grafiekOefening">
+
+                <option value="">
+                    Kies een oefening
+                </option>
+
+                <option value="Incline Chest Press">
+                    Incline Chest Press
+                </option>
+
+                <option value="Flat Press">
+                    Flat Press
+                </option>
+
+                <option value="Shoulder Press">
+                    Shoulder Press
+                </option>
+
+                <option value="Lateral Raise">
+                    Lateral Raise
+                </option>
+
+                <option value="Dips">
+                    Dips
+                </option>
+
+                <option value="Overhead Extension">
+                    Overhead Extension
+                </option>
+
+                <option value="Tricep Pushdown">
+                    Tricep Pushdown
+                </option>
+
+                <option value="Lat Pulldown">
+                    Lat Pulldown
+                </option>
+
+                <option value="Upper Back Row">
+                    Upper Back Row
+                </option>
+
+                <option value="Close Grip Lat Pulldown">
+                    Close Grip Lat Pulldown
+                </option>
+
+                <option value="Bicep Curl">
+                    Bicep Curl
+                </option>
+
+                <option value="Hammer Curl">
+                    Hammer Curl
+                </option>
+
+                <option value="Chest Fly">
+                    Chest Fly
+                </option>
+
+                <option value="Leg Press">
+                    Leg Press
+                </option>
+
+                <option value="Squat">
+                    Squat
+                </option>
+
+                <option value="Stiff Leg Deadlift">
+                    Stiff Leg Deadlift
+                </option>
+
+                <option value="RDL">
+                    RDL
+                </option>
+
+                <option value="Leg Extension">
+                    Leg Extension
+                </option>
+
+                <option value="Leg Curl">
+                    Leg Curl
+                </option>
+
+                <option value="Calf Raise">
+                    Calf Raise
+                </option>
+
+                <option value="Abductor">
+                    Abductor Machine
+                </option>
+
+            </select>
+
+            <br><br>
 
 
-        <!-- OPGESLAGEN TRAININGEN -->
+            <!-- GRAFIEK -->
 
-        <h3 class="wit">
-            Opgeslagen trainingen
-        </h3>
+            <div
+                style="
+                    width: 100%;
+                    height: 450px;
+                    background: rgba(0,0,0,0.25);
+                    padding: 20px;
+                    border-radius: 15px;
+                "
+            >
 
-        <ul
-            id="oefeningTrainingen"
-            class="wit"
-        >
-        </ul>
+                <canvas id="oefeningGrafiek"></canvas>
 
-    </div>
+            </div>
 
-</main>
+
+            <br>
+
+
+            <!-- OPGESLAGEN TRAININGEN -->
+
+            <h3 class="wit">
+                Opgeslagen trainingen
+            </h3>
+
+            <ul
+                id="oefeningTrainingen"
+                class="wit"
+            >
+            </ul>
+
+        </div>
+
+    </main>
 
 </body>
 
