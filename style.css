@@ -339,10 +339,6 @@ input {
 /* Workout toevoegen pagina */
 
 .workout-pagina {
-    background-image: url("images/achtergrond.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     color: white;
 }
 
@@ -423,12 +419,6 @@ html {
 /* OVERZICHT PAGINA */
 
 .overzicht-pagina {
-    background-image:
-        linear-gradient(rgba(24, 0, 118, 0.15), rgba(24, 0, 118, 0.15)),
-        url("images/achtergrond.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     color: white;
     min-height: 100vh;
 }
