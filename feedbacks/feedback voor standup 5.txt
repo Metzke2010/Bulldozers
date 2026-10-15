@@ -16,4 +16,4 @@ workout uitleg - misschien ook meer beginner-vriendelijke / simple workouts. den
 workout uitleg - maak (als mogelijk en de vorige is gedaan) een categorie beginner en gevorederde met de bijbehorende informatie
 navigatiebalk - verschillen per pagina in de balk. op telefoon is logo boven de navigatiebalk/scherm
 doelen/overzicht - laat dit verbinden. laat de balkjes in het overzicht zien en alleen de inputs in doelen pagina
-workout toevoegen - de balkjes voor inpute komen uit het scherm
+workout toevoegen - de balkjes voor input komen uit het scherm op telefoon
