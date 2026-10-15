@@ -17,3 +17,4 @@ workout uitleg - maak (als mogelijk en de vorige is gedaan) een categorie beginn
 navigatiebalk - verschillen per pagina in de balk. op telefoon is logo boven de navigatiebalk/scherm
 doelen/overzicht - laat dit verbinden. laat de balkjes in het overzicht zien en alleen de inputs in doelen pagina
 workout toevoegen - de balkjes voor input komen uit het scherm op telefoon
+plaatjes fixen - ze laden niet op telefoon
