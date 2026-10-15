@@ -1,0 +1,19 @@
+oude feedback:
+
+overzicht - invoer balkjes te klein en de tekst erin niet goed zichtbaar (gedaan)
+navigatiebalk - logo linksboven? (gedaan)
+workout toevoegen - laat de workouts naar overzicht gaan (gedaan)
+overzicht - tabellen, grafieken etc. (gedaan)
+overzicht/doelen - laat de waardes verbinden (stappenteller in overzicht zorgt voor progressie in doelen en andersom) (gedaan)
+javascript - laat alles opslaan in de browser (gedaan)
+workout uitleg - misschien ook meer beginner-vriendelijke / simple workouts. denk aan pushups of squats
+workout uitleg - maak (als mogelijk en de vorige is gedaan) een categorie beginner en gevorederde met de bijbehorende informatie
+navigatiebalkje - maak het zodat hij bovenaan de website blijft en niet meebeweegt met het scherm (gedaan)
+
+nieuwe feedback:
+
+workout uitleg - misschien ook meer beginner-vriendelijke / simple workouts. denk aan pushups of squats
+workout uitleg - maak (als mogelijk en de vorige is gedaan) een categorie beginner en gevorederde met de bijbehorende informatie
+navigatiebalk - verschillen per pagina in de balk. op telefoon is logo boven de navigatiebalk/scherm
+doelen/overzicht - laat dit verbinden. laat de balkjes in het overzicht zien en alleen de inputs in doelen pagina
+workout toevoegen - de balkjes voor inpute komen uit het scherm
