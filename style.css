@@ -171,7 +171,7 @@ input:focus {
     gap: 2rem;
 }
 
-/* Responsive Design */
+/* Responsive Design 
 @media (max-width: 768px) {
 
     .nav {
@@ -208,7 +208,55 @@ input:focus {
         padding: 1rem;
     }
 
+} */
+
+
+@media (max-width: 768px) {
+    .header {
+        height: 65px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        height: 65px;
+        padding: 0 10px 0 65px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .logo-nav {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+        z-index: 1001;
+    }
+
+    .nav-link {
+        flex-shrink: 0;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding-top: 10rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .overlay {
+        padding: 1rem;
+    }
 }
+
 
 .wit {
     color: white;
@@ -342,11 +390,6 @@ input {
     color: white;
 }
 
-.workout-pagina .container {
-    width: 70%;
-    margin: auto;
-}
-
 .workout-pagina h1 {
     color: white;
     font-size: 40px;
@@ -413,6 +456,75 @@ input {
     color: white;
     margin-top: 10px;
 }
+
+
+/* Workoutpagina */
+.workout-pagina {
+    overflow-x: hidden;
+}
+
+.workout-pagina main {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* De vakken waarin je workouts invult */
+.workout-pagina .workout-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+/* Invoervelden en keuzelijst */
+.workout-pagina input,
+.workout-pagina select {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 12px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/* Knoppen */
+.workout-pagina .btn {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 12px 18px;
+    margin-top: 10px;
+}
+
+/* Aanpassingen voor telefoons */
+@media (max-width: 600px) {
+    .workout-pagina main {
+        padding: 12px;
+    }
+
+    .workout-pagina .workout-box {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .workout-pagina input,
+    .workout-pagina select,
+    .workout-pagina .btn {
+        width: 100%;
+        display: block;
+    }
+
+    .workout-pagina h1 {
+        font-size: 28px;
+    }
+}
+
+
 html {
     overflow-x: hidden;
 }
