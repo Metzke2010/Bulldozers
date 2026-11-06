@@ -3,12 +3,10 @@ let stappen = 0;
 let totaalstappen = 0;
 let totaalcalorien = 0;
 
-// Gegevens ophalen uit localStorage
 let doelenData = JSON.parse(
     localStorage.getItem("doelenData")
 ) || {};
 
-// Opgeslagen gegevens terugzetten
 workouts = doelenData.workouts || 0;
 totaalstappen = doelenData.totaalstappen || 0;
 totaalcalorien = doelenData.totaalcalorien || 0;
@@ -147,3 +145,18 @@ document.addEventListener("DOMContentLoaded", function() {
     updatePaginaCalorien();
 
 });
+function resetDoelen() {
+    workouts = 0;
+    totaalstappen =0;
+    totaalcalorien = 0;
+
+    document.getElementById("workoutDoel").innerText = 4;
+    document.getElementById("stappenDoel").innerText = 4;
+    document.getElementById("calorienDoel").innerText = 4;
+
+    updatePaginaWorkouts();
+    updatePaginaStappen();
+    updatePaginaCalorien();
+
+    gegevensOpslaan();
+}

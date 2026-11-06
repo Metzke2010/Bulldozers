@@ -3,6 +3,12 @@ let totaalMinuten = 0;
 let totaalStappen = 0;
 let totaalCalorieen = 0;
 
+let gewichtData = JSON.parse(
+    localStorage.getItem("gewichtData")
+) || "0";
+
+document.getElementById("gewichtTotaal").textContent = gewichtData;
+
 function calorieenOpslaan() {
     let calorieen = document.getElementById("calorieen").value;
     totaalCalorieen = totaalCalorieen + Number(calorieen);
@@ -19,7 +25,12 @@ function stappenOpslaan() {
 
 function gewichtOpslaan() {
     let gewicht = document.getElementById("gewicht").value;
-    document.getElementById("gewichtTotaal").textContent = gewicht;
+    gewichtData = gewicht;
+    localStorage.setItem(
+        "gewichtData",
+        JSON.stringify(gewichtData)
+    );
+    document.getElementById("gewichtTotaal").textContent = gewichtData;
 }
 
 function workoutTellerToevoegen() {
