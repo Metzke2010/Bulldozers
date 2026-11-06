@@ -3,6 +3,10 @@ let totaalMinuten = 0;
 let totaalStappen = 0;
 let totaalCalorieen = 0;
 
+let oefeningData = JSON.parse(
+    localStorage.getItem("oefeningData")
+) || {};
+
 let gewichtData = JSON.parse(
     localStorage.getItem("gewichtData")
 ) || "0";
@@ -258,9 +262,9 @@ function updatePaginaCalorien() {
 // OEFENINGEN OPSLAAN
 // ==========================================
 
-let oefeningData = JSON.parse(
-    localStorage.getItem("oefeningData")
-) || {};
+//let oefeningData = JSON.parse(
+//    localStorage.getItem("oefeningData")
+//) || {};
 
 let huidigeGrafiek = null;
 
