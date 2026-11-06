@@ -91,25 +91,22 @@ function doelenOpslaanCalorien() {
 
 function updatePaginaWorkouts() {
     let workoutDoel = Number(document.getElementById("workoutDoel").innerText);
-    workouts = Math.min(workouts, workoutDoel);
     document.getElementById("workoutHuidig").innerText = workouts;
-    let workoutPercentage = (workouts / workoutDoel) * 100;
+    let workoutPercentage = Math.min((workouts / workoutDoel) * 100, 100);
     document.getElementById("workoutBalk").style.width = workoutPercentage + "%";
 }
 
 function updatePaginaStappen() {
     let stappenDoel = Number(document.getElementById("stappenDoel").innerText);
-    stappen = Math.min(totaalstappen, stappenDoel);
     document.getElementById("stappenHuidig").innerText = stappen;
-    let stappenPercentage = (totaalstappen / stappenDoel) * 100;
+    let stappenPercentage = Math.min((totaalstappen / stappenDoel) * 100, 100);
     document.getElementById("stappenBalk").style.width = stappenPercentage + "%";
 }
 
 function updatePaginaCalorien() {
     let calorienDoel = Number(document.getElementById("calorienDoel").innerText);
-    calorien = Math.min(totaalcalorien, calorienDoel);
     document.getElementById("calorienHuidig").innerText = calorien;
-    let calorienPercentage = (totaalcalorien / calorienDoel) * 100;
+    let calorienPercentage = Math.min((totaalcalorien / calorienDoel) * 100, 100);
     document.getElementById("calorienBalk").style.width = calorienPercentage + "%";
 }
 
