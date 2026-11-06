@@ -93,39 +93,39 @@ function doelenOpslaanCalorien() {
     gegevensOpslaan();
 }
 
-function updatePaginaWorkouts(meldingTonen = true) {
+function updatePaginaWorkouts() {
     let workoutDoel = Number(document.getElementById("workoutDoel").innerText);
     document.getElementById("workoutHuidig").innerText = workouts;
     let workoutPercentage = Math.min((workouts / workoutDoel) * 100, 100);
     document.getElementById("workoutBalk").style.width = workoutPercentage + "%";
     if (workoutPercentage >= 100 && workoutMeldingGetoond == false) {
-        alert("Doel gehaald!");
+        alert("Workoutdoel gehaald!");
         workoutMeldingGetoond = true;
         return;
     }
 }
 
-function updatePaginaStappen(meldingTonen = true) {
+function updatePaginaStappen() {
     let stappenDoel = Number(document.getElementById("stappenDoel").innerText);
     stappen = totaalstappen;
     document.getElementById("stappenHuidig").innerText = stappen;
     let stappenPercentage = Math.min((totaalstappen / stappenDoel) * 100, 100);
     document.getElementById("stappenBalk").style.width = stappenPercentage + "%";
     if (stappenPercentage >= 100 && stappenMeldingGetoond == false) {
-        alert("Doel gehaald!");
+        alert("Stappendoel gehaald!");
         stappenMeldingGetoond = true;
         return;
     }
 }
 
-function updatePaginaCalorien(meldingTonen = true) {
+function updatePaginaCalorien() {
     let calorienDoel = Number(document.getElementById("calorienDoel").innerText);
     calorien = totaalcalorien;
     document.getElementById("calorienHuidig").innerText = calorien;
     let calorienPercentage = Math.min((totaalcalorien / calorienDoel) * 100, 100);
     document.getElementById("calorienBalk").style.width = calorienPercentage + "%";
     if (calorienPercentage >= 100 && calorienMeldingGetoond == false) {
-        alert("Doel gehaald!");
+        alert("Caloriendoel gehaald!");
         calorienMeldingGetoond = true;
         return;
     }
