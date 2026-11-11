@@ -218,6 +218,7 @@ function eigenWorkoutToevoegen() {
 
     localStorage.setItem("oefeningData", JSON.stringify(oefeningData));
 
+    // Toevoegen aan de zichtbare lijst
     let lijst = document.getElementById("workoutLijst");
     if (lijst) {
         let nieuwItem = document.createElement("li");
@@ -226,6 +227,24 @@ function eigenWorkoutToevoegen() {
         lijst.appendChild(nieuwItem);
     }
 
+    // Direct toevoegen aan het keuzemenu als hij daar nog niet in staat
+    let workoutSelect = document.getElementById("workout");
+    if (workoutSelect) {
+        let bestaatAl = false;
+        for (let i = 0; i < workoutSelect.options.length; i++) {
+            if (workoutSelect.options[i].value === workout) {
+                bestaatAl = true;
+            }
+        }
+        if (!bestaatAl) {
+            let optie = document.createElement("option");
+            optie.value = workout;
+            optie.textContent = workout;
+            workoutSelect.appendChild(optie);
+        }
+    }
+
+    // Invoervelden leegmaken
     document.getElementById("eigenWorkout").value = "";
     document.getElementById("eigenWorkoutKg").value = "";
     document.getElementById("eigenWorkoutHerhalingen").value = "";
@@ -234,49 +253,84 @@ function eigenWorkoutToevoegen() {
 // ==========================================
 // EVENT LISTENERS BIJ HET LADEN VAN DE PAGINA
 // ==========================================
-
-// Zorgt ervoor dat functies pas runnen als de HTML volledig is ingeladen
 document.addEventListener("DOMContentLoaded", function() {
 
-    // 1. Initialiseer de gewichtsgrafiek op de overzichtspagina
+    // 1. Start de gewichtsgrafiek (Overzicht pagina)
     toonGewichtGrafiek();
 
-    // 2. Setup voor de oefeningen-dropdown om grafieken te tonen
-    let select = document.getElementById("grafiekOefening");
-
-    if (select) {
+    // 2. Voeg opgeslagen oefeningen toe aan de dropdown voor de grafiek (Overzicht pagina)
+    let grafiekSelect = document.getElementById("grafiekOefening");
+    if (grafiekSelect) {
         let oefeningen = Object.keys(oefeningData);
-
-        // Voeg de opgeslagen oefeningen toe aan de dropdown als opties
         oefeningen.forEach(function(oefening) {
             let bestaatAl = false;
-
-            for (let i = 0; i < select.options.length; i++) {
-                if (select.options[i].value == oefening) {
+            for (let i = 0; i < grafiekSelect.options.length; i++) {
+                if (grafiekSelect.options[i].value == oefening) {
                     bestaatAl = true;
                 }
             }
-
             if (bestaatAl == false) {
                 let optie = document.createElement("option");
                 optie.value = oefening;
                 optie.textContent = oefening;
-                select.appendChild(optie);
+                grafiekSelect.appendChild(optie);
             }
         });
 
-        // Als er een andere oefening wordt gekozen in de lijst, update dan de grafiek en logboek
-        select.addEventListener("change", function() {
-            let oefening = select.value;
-            if (oefening == "") {
-                return;
-            }
+        // Update grafiek en lijst bij het kiezen van een andere oefening
+        grafiekSelect.addEventListener("change", function() {
+            let oefening = grafiekSelect.value;
+            if (oefening == "") return;
             toonOefeningGrafiek(oefening);
             toonOpgeslagenTrainingen(oefening);
         });
     }
-});
 
+    // 3. Voeg eigen oefeningen toe aan het keuzemenu (Workout toevoegen pagina)
+    let workoutSelect = document.getElementById("workout");
+    if (workoutSelect) {
+        let alleOefeningen = Object.keys(oefeningData);
+        alleOefeningen.forEach(function(oefeningNaam) {
+            let bestaatAl = false;
+            for (let i = 0; i < workoutSelect.options.length; i++) {
+                if (workoutSelect.options[i].value === oefeningNaam) {
+                    bestaatAl = true;
+                }
+            }
+            if (!bestaatAl) {
+                let optie = document.createElement("option");
+                optie.value = oefeningNaam;
+                optie.textContent = oefeningNaam;
+                workoutSelect.appendChild(optie);
+            }
+        });
+    }
+
+    // 4. Zet de trainingen van vandaag direct in de zichtbare lijst (Workout toevoegen pagina)
+    let workoutLijst = document.getElementById("workoutLijst");
+    if (workoutLijst) {
+        let vandaag = new Date();
+        let datumVandaag = 
+            String(vandaag.getDate()).padStart(2, "0") + "-" + 
+            String(vandaag.getMonth() + 1).padStart(2, "0") + "-" + 
+            vandaag.getFullYear();
+
+        let alleOefeningen = Object.keys(oefeningData);
+        
+        alleOefeningen.forEach(function(oefeningNaam) {
+            let trainingen = oefeningData[oefeningNaam];
+            
+            trainingen.forEach(function(training) {
+                if (training.datum === datumVandaag) {
+                    let nieuwItem = document.createElement("li");
+                    nieuwItem.style.color = "white";
+                    nieuwItem.textContent = oefeningNaam + " - " + training.kg + " kg x " + training.herhalingen + " herhalingen";
+                    workoutLijst.appendChild(nieuwItem);
+                }
+            });
+        });
+    }
+});
 
 // ==========================================
 // GRAFIEKEN MAKEN
