@@ -1,6 +1,5 @@
-// ==========================================
+
 // GLOBALE VARIABELEN
-// ==========================================
 let aantalWorkouts = 0;
 let totaalMinuten = 0;
 let totaalStappen = 0;
@@ -11,9 +10,9 @@ let oefeningData = JSON.parse(
     localStorage.getItem("oefeningData")
 ) || {};
 
-// ==========================================
+
 // GEWICHT OPSLAAN & GESCHIEDENIS
-// ==========================================
+
 // Huidig gewicht ophalen uit localStorage
 let gewichtData = JSON.parse(
     localStorage.getItem("gewichtData")
@@ -33,9 +32,8 @@ if (document.getElementById("gewichtTotaal")) {
     document.getElementById("gewichtTotaal").textContent = gewichtData;
 }
 
-// ==========================================
 // ALGEMENE TRACKERS (Calorieën, Stappen, Minuten)
-// ==========================================
+
 
 // Calorieën toevoegen aan het totaal en veld leegmaken
 function calorieenOpslaan() {
@@ -75,9 +73,7 @@ function workoutTellerToevoegen() {
     }
 }
 
-// ==========================================
 // GEWICHT FUNCTIES
-// ==========================================
 
 // Nieuw gewicht opslaan, toevoegen aan geschiedenis en grafiek updaten
 function gewichtOpslaan() {
@@ -121,9 +117,9 @@ function gewichtOpslaan() {
     toonGewichtGrafiek();
 }
 
-// ==========================================
+
 // OEFENINGEN OPSLAAN
-// ==========================================
+
 
 // Bestaande workout uit een lijst opslaan inclusief kg en herhalingen
 function workoutToevoegen() {
@@ -250,9 +246,9 @@ function eigenWorkoutToevoegen() {
     document.getElementById("eigenWorkoutHerhalingen").value = "";
 }
 
-// ==========================================
+
 // EVENT LISTENERS BIJ HET LADEN VAN DE PAGINA
-// ==========================================
+
 document.addEventListener("DOMContentLoaded", function() {
 
     // 1. Start de gewichtsgrafiek (Overzicht pagina)
@@ -332,9 +328,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// ==========================================
+
 // GRAFIEKEN MAKEN
-// ==========================================
+
 
 // Functie die de lijngrafiek tekent voor een specifieke krachtoefening
 function toonOefeningGrafiek(oefening) {
@@ -450,9 +446,9 @@ function toonGewichtGrafiek() {
 }
 
 
-// ==========================================
+
 // OPGESLAGEN TRAININGEN TONEN (LIJST)
-// ==========================================
+
 
 // Toont de geschiedenis van een geselecteerde oefening als een tekstlijst onder de grafiek
 function toonOpgeslagenTrainingen(oefening) {
